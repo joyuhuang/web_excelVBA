@@ -1,0 +1,84 @@
+@charset "UTF-8";
+* {
+  font-family: Helvetica, Arial, "Microsoft JhengHei UI", 微軟正黑體, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  height: 62px;
+}
+
+.info {
+  height: 550px;
+  background-color: #a9e8e3;
+}
+
+header, .info, .content1, .content3 {
+  position: relative;
+}
+
+.curve {
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+}
+
+.content1 {
+  height: 550px;
+  background-color: #ffcb25;
+}
+
+.content2 {
+  height: 1750px;
+  background-color: #eaeaea;
+}
+
+.content3 {
+  height: 690px;
+  background-color: #0b7f74;
+}
+
+form {
+  height: 800px;
+}
+
+header {
+  height: 740px;
+  width: 100%;
+  margin: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #00b8a9;
+}
+
+@media (min-width: 768px) {
+  header {
+    background-image: url(../images/banner.jpg);
+  }
+}
+
+@media (min-width: 1300px) {
+  header {
+    background-position: center top;
+    background-size: auto;
+  }
+}
+
+header h1 {
+  text-indent: -9999px;
+}
+
+footer {
+  text-align: center;
+  color: #FFF;
+  background: #df2012;
+  background: -webkit-linear-gradient(#fb5043, #df2012 65%);
+  background: -o-linear-gradient(#fb5043, #df2012 65%);
+  background: -moz-linear-gradient(#fb5043, #df2012 65%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fb5043), color-stop(65%, #df2012));
+  background: linear-gradient(#fb5043, #df2012 65%);
+  padding: 20px 0 50px;
+}
+
+/*# sourceMappingURL=style.css.map */
