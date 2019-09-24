@@ -1,3 +1,21 @@
+/*-----最上方nav導覽列---------------------------*/
+.topbar {
+    height: map-get($heights, nav);
+}
+#logo {
+    height: 36px;
+
+}
+.topbar li {
+    list-style: none;
+    float: left;
+
+}
+.topbar li a {
+    padding: 25px;
+}
+
+/*-----header banner 手機版型----------------------*/
 header {
     height: map-get($heights, header);
     width: 100%;
@@ -7,12 +25,15 @@ header {
     background-repeat: no-repeat;
     background-color: map-get($colors, primary);
 }
+/*-----header banner 平板版型----------------------*/
 @media (min-width: 768px) { 
-    header {background-image: url(../images/banner.jpg);}
+    header {background-image: url(../images/banner_bg.jpg);}
 }
+/*-----header banner 桌機版型----------------------*/
 @media (min-width: 1300px) { 
     header {background-position: center top; background-size: auto;}
 }
 header h1 {
     text-indent: -9999px;
 }
+

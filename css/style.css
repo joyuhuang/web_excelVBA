@@ -1,63 +1,49 @@
 @charset "UTF-8";
-* {
-  font-family: Helvetica, Arial, "Microsoft JhengHei UI", 微軟正黑體, sans-serif;
-  margin: 0;
-  padding: 0;
+/*	text: #333,
+	text_light: #484f59,
+	text_dark: #161518,
+	title: #087b97,
+	// title_del: #75b9c6,
+	highlight: #feff00,
+	text_white: #FFF,
+	// sub-white: #96dce9
+);*/
+/*-----最上方nav導覽列---------------------------*/
+.topbar {
+  height: 70px;
 }
 
-nav {
-  height: 62px;
+#logo {
+  height: 36px;
 }
 
-.info {
-  height: 550px;
-  background-color: #a9e8e3;
+.topbar li {
+  list-style: none;
+  float: left;
 }
 
-header, .info, .content1, .content3 {
-  position: relative;
+.topbar li a {
+  padding: 25px;
 }
 
-.curve {
-  position: absolute;
-  bottom: -1px;
-  width: 100%;
-}
-
-.content1 {
-  height: 550px;
-  background-color: #ffcb25;
-}
-
-.content2 {
-  height: 1750px;
-  background-color: #eaeaea;
-}
-
-.content3 {
-  height: 690px;
-  background-color: #0b7f74;
-}
-
-form {
-  height: 800px;
-}
-
+/*-----header banner 手機版型----------------------*/
 header {
-  height: 740px;
+  height: 750px;
   width: 100%;
   margin: auto;
   background-size: contain;
   background-repeat: no-repeat;
-  background-color: #00b8a9;
+  background-color: #2cbcc5;
 }
 
+/*-----header banner 平板版型----------------------*/
 @media (min-width: 768px) {
   header {
-    background-image: url(../images/banner.jpg);
+    background-image: url(../images/banner_bg.jpg);
   }
 }
 
+/*-----header banner 桌機版型----------------------*/
 @media (min-width: 1300px) {
   header {
     background-position: center top;
@@ -79,6 +65,109 @@ footer {
   background: -webkit-gradient(linear, left top, left bottom, from(#fb5043), color-stop(65%, #df2012));
   background: linear-gradient(#fb5043, #df2012 65%);
   padding: 20px 0 50px;
+}
+
+* {
+  font-family: "Microsoft JhengHei UI", 微軟正黑體, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-bottom: 150px;
+}
+
+p {
+  font-size: 18px;
+  color: #333;
+}
+
+.info {
+  background-color: #96dce9;
+  background-image: url(../images/info_curve.svg);
+  background-repeat: no-repeat;
+  background-position: bottom -1px center;
+  background-size: 100%;
+  padding: 30px;
+}
+
+.info .container div {
+  background-color: #fff;
+  display: inline-block;
+  width: 35%;
+  margin: 5%;
+  padding: 30px 0;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.info .container div h3 {
+  background-color: #087b97;
+  line-height: 1.5em;
+  font-weight: normal;
+}
+
+.info .container div p {
+  padding: 10px 50px;
+}
+
+.info img {
+  padding-bottom: 120px;
+}
+
+.content1 {
+  background-color: #ffcb25;
+  background-image: url(../images/content1_curve.svg);
+  background-repeat: no-repeat;
+  background-position: bottom -1px center;
+  background-size: 100%;
+}
+
+.circle {
+  background-color: #fffdcc;
+  width: 22%;
+  padding: 50px 30px;
+  border-radius: 135px;
+}
+
+.content2 {
+  background-color: #eaeaea;
+  background-image: url(../images/content2_curve.svg);
+  background-repeat: no-repeat;
+  background-position: bottom -1px center;
+  background-size: 100%;
+}
+
+.content3 {
+  background-color: #087b97;
+  background-image: url(../images/content3_curve.svg);
+  background-repeat: no-repeat;
+  background-position: bottom -1px center;
+  background-size: 100%;
+}
+
+form {
+  background-color: #fff;
+}
+
+.title_yellow {
+  color: #feff00;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.point {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.text_b30 {
+  font-size: 30px;
+  color: #087b97;
+  font-weight: bold;
+  line-height: 1.8em;
 }
 
 /*# sourceMappingURL=style.css.map */

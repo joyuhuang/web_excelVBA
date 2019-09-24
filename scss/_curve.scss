@@ -1,0 +1,16 @@
+header, .info, .content1, .content3 {
+    position: relative;
+}
+.curve {
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+}
+html, body {width: 100%;}
+// header:before {
+//     // content: url(../source/hesder下方曲線.svg);
+//     display: block;
+//     width: 100%;
+//     min-height: 50px;
+//     // background-image: url(../source/hesder下方曲線.svg);
+// }

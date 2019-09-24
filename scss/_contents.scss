@@ -1,0 +1,93 @@
+// --測試用，之後刪除-------------------------
+// @each $area,$height in $heights {
+//     .#{$area} {
+//         min-height: $height;
+//     }
+// }
+// -----------------------------------------
+
+
+* {
+    font-family: $font_family;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: $container_h;
+    margin: 0 auto;
+    padding-bottom: 150px;
+}
+p {
+    font-size: 18px;
+    color: #333;
+}
+
+// -----課程資訊-----------------------------
+.info {
+    background-color: map-get($colors, light);
+    background-image: url(../images/info_curve.svg);
+    background-repeat: no-repeat;
+    background-position: bottom -1px center;
+    background-size: 100%;
+    padding: 30px;
+    // -----白色圓角區塊----------------------
+    .container div {
+        background-color: #fff;
+        display: inline-block;
+        width: 35%;
+        margin:5%;
+        padding: 30px 0;
+        border-radius: 30px;
+        text-align: center;
+        // 深底黃字標題-----------------------
+        h3 {
+            background-color: map-get($colors, dark);
+            line-height: 1.5em;
+            font-weight: normal;
+        }
+        // 課程名稱&資訊----------------------
+        p {
+            padding: 10px 50px;
+        }
+    }
+    // -----黃色箭頭---------------------------
+    img {
+        padding-bottom: 120px;
+    }
+}
+// -----課程資訊end--------------------------
+// -----課程優點-----------------------------
+.content1 {
+    background-color: map-get($colors, second);
+    background-image: url(../images/content1_curve.svg);
+    background-repeat: no-repeat;
+    background-position: bottom -1px center;
+    background-size: 100%;
+}
+.circle {
+    background-color: map-get($colors, second_light);
+    width: 22%;
+    padding: 50px 30px;
+    border-radius: 135px;
+}
+
+// -----老師及課程介紹------------------------
+.content2 {
+    background-color: map-get($colors, note);
+    background-image: url(../images/content2_curve.svg);
+    background-repeat: no-repeat;
+    background-position: bottom -1px center;
+    background-size: 100%;
+}
+// -----適合對象------------------------------
+.content3 {
+    background-color: map-get($colors, dark);
+    background-image: url(../images/content3_curve.svg);
+    background-repeat: no-repeat;
+    background-position: bottom -1px center;
+    background-size: 100%;
+}
+// -----索取資訊表單--------------------------
+form {
+    background-color: #fff;
+}

@@ -1,33 +1,30 @@
-$font_family: Helvetica, Arial, "Microsoft JhengHei UI", 微軟正黑體, sans-serif;
-// $colors: (
-// 	primary: #2cbcc5,
-// 	second: #ffcb25,
-// 	light: #96dce9,
-// 	dark: #087b97
-// );
+$font_family: "Microsoft JhengHei UI", 微軟正黑體, sans-serif;
+$container_h: 1140px;
 $colors: (
-	primary: #00b8a9,
+	primary: #2cbcc5,
+	light: #96dce9,
+	dark: #087b97,
 	second: #ffcb25,
-	light: #a9e8e3,
-	dark: #0b7f74,
-	white: #eaeaea
-);
-$font_colors: (
-	text: #222,
-	text_light: #3d3d3d,
-	text_dark: #000,
-	title: #03595f,
-	title_del: #75b9c6,
+	second_light: #fffdcc,
+	note: #eaeaea
+	);
+
+/*	text: #333,
+	text_light: #484f59,
+	text_dark: #161518,
+	title: #087b97,
+	// title_del: #75b9c6,
 	highlight: #feff00,
-	white: #FFF,
-	sub-white: #96dce9
-);
+	text_white: #FFF,
+	// sub-white: #96dce9
+);*/
+
 $heights: (
-	nav: 62px,
-	header: 740px,
-	info: 550px,
-	content1: 550px,
-	content2: 1750px,
-	content3: 690px,
-	form: 800px
+	nav: 70px,
+	header: 750px,
+	info: 510px,
+	content1: 650px,
+	content2: 1800px,
+	content3: 650px,
+	form: 300px
 );

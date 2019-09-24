@@ -1,4 +1,8 @@
 @import "var";
-@import "layout";
+// @import "curve";
 @import "header";
 @import "footer";
+@import "contents";
+
+// text要放最後比較保險(要覆蓋p的設定)
+@import "text";

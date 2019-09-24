@@ -1,52 +1,192 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>掌握Excel VBA，工作效率秒提升</title>
-    <META NAME="Title" CONTENT="掌握Excel VBA，工作效率秒提升">
-    <META NAME="Description" CONTENT="擁有VBA技能薪資也跟著升級！老師將一步步帶領大家學會錄製巨集、簡易VBA撰寫及函數、語法的用運，初學者也可以輕鬆學習，立刻解決工作上遇到的問題。">
-    <META NAME="keywords" CONTENT ="IT360,Excel VBA,巨集,VBA語法,函數 ">
-    <link rel="stylesheet" href="css/style.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>掌握Excel VBA，工作效率秒提升</title>
+	<META NAME="Title" CONTENT="掌握Excel VBA，工作效率秒提升">
+	<META NAME="Description" CONTENT="擁有VBA技能薪資也跟著升級！老師將一步步帶領大家學會錄製巨集、簡易VBA撰寫及函數、語法的用運，初學者也可以輕鬆學習，立刻解決工作上遇到的問題。">
+	<META NAME="keywords" CONTENT="IT360,Excel VBA,巨集,VBA語法,函數 ">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/TWzipcode/jquery.twzipcode.min.js"></script>
+	<style>
+		#twzipcode input {display: none;}
+	</style>
+	<script>
+		$(document).ready(function(){
+		$('#twzipcode').twzipcode();
+		});
+	</script>
 </head>
 <body>
-    <nav></nav>
-    <header>
-        <h1>Excel VBA初階概念、進階實務</h1>
-        <img class="curve" src="source/hesder曲線test2.svg" alt="">
-    </header>
-    <section class="info">
-        <h2>初階課程</h2>
-        <div>
-            <h3>Excel VBA初階概念：入門超easy，工作效率翻倍提升</h3>
-            <p>課程時數：4小時53分</p>
-            <p>先備能力：Excel基本操作能力</p>
-        </div>
-        <h2>進階課程</h2>
-        <div>
-            <h3>Excel VBA進階實務：80組常用函數語法一次通通掌握</h3>
-            <p>課程時數：5小時46分</p>
-            <p>先備能力：上過Excel VBA初階概念者</p>
-        </div>
-        <img class="curve" src="source/info曲線top.svg" alt="">
-    </section>
-    <section class="content1">
-        <h2>重點</h2>
-        <img class="curve" src="source/content曲線top.svg" alt="">
-    </section>
-    <section class="content2">老師介紹及課程內容</section>
-    <section class="content3">
-        <h2>本課程適合學習對象</h2>
-        <img class="curve" src="source/content3曲線.svg" alt="">
-    </section>
-    <form action="">
-        馬上索取課程資訊
-    </form>
-    <footer>
-        <p>客服專線 0800-231-381</p>
-        <p>週一至週五 09:00~12:00、13:00~18:00</p>
-        <p>巨匠電腦版權所有｜ 2019 Gjun information Co., Ltd. All Rights Reserved</p>
-    </footer>
+	<nav>
+		<img id="logo" src="images/logo_it360.png" alt="巨匠電腦">
+		<ul class="topbar">
+			<li><a href="javascript:;" title="開課查詢">開課查詢</a></li>
+			<li><a href="javascript:;" title="課程總覽">課程總覽</a></li>
+			<li><a href="javascript:;" title="名師專區">名師專區</a></li>
+			<li><a href="javascript:;" title="合作開課">合作開課</a></li>
+			<li><a href="javascript:;" title="支援服務">支援服務</a></li>
+			<li><a href="javascript:;" title="學員專區">學員專區</a></li>
+		</ul>
+	</nav>
+	<header>
+		<img src="images/banner_title.png" alt="掌握Excel VBA，工作效率秒提升">
+		<h1>Excel VBA初階概念、進階實務</h1>
+	</header>
+	<section class="info">
+		<div class="container">
+			<div>
+				<h3 class="title_yellow">初階課程</h3>
+				<p class="text_b30">Excel VBA初階概念：入門超easy，工作效率翻倍提升</p>
+				<p>課程時數：4小時53分</p>
+				<p>先備能力：Excel基本操作能力</p>
+			</div>
+			<img src="images/info_arrow.svg" alt="">
+			<div>
+				<h3 class="title_yellow">進階課程</h3>
+				<p class="text_b30">Excel VBA進階實務：80組常用函數語法一次通通掌握</p>
+				<p>課程時數：5小時46分</p>
+				<p>先備能力：上過Excel VBA初階概念者</p>
+			</div>
+		</div>
+	</section>
+	<section class="content1">
+		<!--考慮是否要加標題-->
+		<div class="container">
+			<h3>使用Excel，你是否也有這樣的困擾？</h3>
+			<div>
+				<p class="del">海量資料土法煉鋼</p>
+				<img src="images/arrow.svg" alt="">
+				<img src="images/icon1.svg" alt="">
+				<div class="circle">
+					<p class="text_b30">一鍵巨集就做好</p>
+					<p>快速處理大量資料，減少重複性操作，避免人工失誤。</p>
+				</div>
+			</div>
+			
+			<div>
+				<p class="del">VBA語法好難懂</p>
+				<img src="images/arrow.svg" alt="">
+				<img src="images/icon2.svg" alt="">
+				<div class="circle">
+					<p class="text_b30">實例操作馬上會</p>
+					<p>以最簡單常用的案例解說，初學者也能成為VBA達人。</p>
+				</div>
+			</div>
+			
+			<div>
+				<p class="del">找語法超花時間</p>
+				<img src="images/arrow.svg" alt="">
+				<img src="images/icon3.svg" alt="">
+				<div class="circle">
+					<p class="text_b30">語法字典看這裡</p>
+					<p>80組必學語法全收錄，工作馬上可以用，還可自行修改。</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="content2">
+		<div class="container">
+			<div><img src="images/teacher_s.jpg" alt="蘇世榮老師"></div>
+			<h3>蘇世榮老師</h3>
+			<ul>
+				<li>25年電腦教學資歷</li>
+				<li>巨匠電腦、政府機關、大專院校專任講師</li>
+				<li>擅長將複雜內容，用實例解析容易理解</li>
+				<li>辦公室文件資訊化與快速整合運用</li>
+				<li>ODF導入和解決轉檔問題</li>
+			</ul>
+			<p>蘇世榮老師的專業強項在於辦公室文件（office軟體）的資訊化與快速整合運用，以及ODF導入和轉檔，教學時相當擅長以實際案例將複雜內容清楚表達，並在各個政府機關和大專院校擔任過專任講師，長年致力於教學，經驗相當豐富，教齡長達25年，更有眾多精采的著作。</p>
+		</div>
+
+
+		<div class="container">
+			<h3>活用Excel VBA，提升效率又加薪！</h3>
+			
+			<h4>簡單案例教學，80組語法一次掌握</h4>
+			<p>根據人力銀行顯示，擁有VBA技能薪資也跟著升級！在這兩門初階、進階課程中，老師將一步步帶領大家學會錄製巨集、簡易VBA撰寫及函數、語法的用運，不會Excel函數、不會寫程式也可以輕鬆學習。並運用實際案例來操作說明，能立刻解決工作上遇到的問題。</p>
+			
+			<div>
+				<h4>錄製巨集的技巧</h4>
+				<img src="images/VBA1.jpg" alt="">
+				<ul>
+					<li>相對位置和絕對位置的差別</li>
+					<li>去除空白列、數字轉換日期</li>
+					<li>建立進銷存系統</li>
+					<li>建立自動記錄的巨集</li>
+				</ul>
+			</div>
+			
+			<div>
+				<h4>VBA初體驗</h4>
+				<img src="images/VBA2.jpg" alt="">
+				<ul>
+					<li>儲存格、欄列、工作表指定方式</li>
+					<li>單條件、多條件判斷與法</li>
+					<li>資料型態和變數運用</li>
+					<li>迴圈語法、物件迴圈</li>
+				</ul>
+			</div>
+			
+			<div>
+				<h4>常用語法</h4>
+				<img src="images/VBA3.jpg" alt="">
+				<ul>
+					<li>活頁簿常用語法</li>
+					<li>工作表常用語法</li>
+					<li>儲存格常用語法</li>
+					<li>其他常用語法</li>
+				</ul>
+			</div>
+			
+			<div>
+				<h4>VBA中使用Excel函數</h4>
+				<img src="images/VBA4.jpg" alt="">
+				<ul>
+					<li>加入Excel函數</li>
+					<li>自訂函數：串接、判斷等級</li>
+					<li>增益級的建立</li>
+					<li>IF、Select Case、Switch、迴圈</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section class="content3">
+		<img src="images/computer.png" alt="">
+		<h3 class="title_yellow">本課程適合學習對象</h3>
+		<ul>
+			<li>任何行業Excel使用者
+				<p>秘書、業務、行銷、人資等行政相關人員</p></li>
+			<li>需使用到資料處理的使用者
+				<p>學生、行政人員、程式設計師、管理階級職員</p></li>
+			<li>有興趣提升Excel技能者
+				<p>社會新鮮人、想增加工作效率的上班族</p></li>
+		</ul>
+
+	</section>
+
+	<section class="contact">
+		<h3>馬上索取課程資訊</h3>
+		<form name="contactForm" method="post" action="">
+			<input type="text" name="contactName" placeholder="姓 名" required="required">
+			<input type="text" name="contactMobile" placeholder="行動電話" required="required">
+			<input type="text" name="contactEmail" placeholder="E-MAIL">
+			<div id="twzipcode"></div>
+			<input type="checkbox" id="contactIAgree" name="contactIAgree" value="1" required="required"><label for="contactIAgree">我已詳細閱讀並接受</label><a
+			onclick="window.open('http://www.pcschool.com.tw/member/Message.html','person',config='height=640,width=830');return false;"
+			href="#">個資保護聲明</a>
+			    <input type="submit" id="submitBtn" value="送出">
+		</form>
+	</section>
+	<footer>
+		<p>客服專線 0800-231-381</p>
+		<p>週一至週五 09:00~12:00、13:00~18:00</p>
+		<p>巨匠電腦版權所有｜ 2019 Gjun information Co., Ltd. All Rights Reserved</p>
+	</footer>
 </body>
+
 </html>
