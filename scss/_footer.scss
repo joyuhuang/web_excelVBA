@@ -1,10 +1,8 @@
 footer {
+	background: #ff8920;
+    padding: 20px 0 50px;
+}
+footer p {
 	text-align: center;
 	color: #FFF;
-	background: #df2012;
-    background: -webkit-linear-gradient(#fb5043,#df2012 65%);
-    background: -o-linear-gradient(#fb5043,#df2012 65%);
-    background: -moz-linear-gradient(#fb5043,#df2012 65%);
-    background: linear-gradient(#fb5043,#df2012 65%);
-    padding: 20px 0 50px;
 }

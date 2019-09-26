@@ -12,25 +12,24 @@ p, ul {
   font-size: 18px;
   color: #333;
   letter-spacing: 1px;
-  line-height: 1.8em;
+  line-height: 1.5em;
 }
 
 .title_yellow {
   color: #feff00;
   font-size: 48px;
   font-weight: bold;
-  letter-spacing: 0.15em;
+  line-height: 1.5em;
 }
 
 .point {
   color: #087b97;
   font-size: 30px;
   font-weight: bold;
-  line-height: 1.8em;
 }
 
 .del {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
   color: #087b97;
   text-decoration: line-through;
@@ -39,6 +38,7 @@ p, ul {
 .title {
   font-size: 36px;
   padding-top: 30px;
+  margin-bottom: 20px;
   line-height: 1.5em;
 }
 
@@ -56,11 +56,6 @@ h1 {
   text-align: center;
   font-size: 30px;
   color: #FFF;
-}
-
-h3 {
-  font-size: 30px;
-  line-height: 1.5em;
 }
 
 h4 {
@@ -145,15 +140,13 @@ header::after {
 }
 
 footer {
+  background: #ff8920;
+  padding: 20px 0 50px;
+}
+
+footer p {
   text-align: center;
   color: #FFF;
-  background: #df2012;
-  background: -webkit-linear-gradient(#fb5043, #df2012 65%);
-  background: -o-linear-gradient(#fb5043, #df2012 65%);
-  background: -moz-linear-gradient(#fb5043, #df2012 65%);
-  background: -webkit-gradient(linear, left top, left bottom, from(#fb5043), color-stop(65%, #df2012));
-  background: linear-gradient(#fb5043, #df2012 65%);
-  padding: 20px 0 50px;
 }
 
 * {
@@ -170,17 +163,21 @@ footer {
 
 .container > div {
   display: inline-block;
+  vertical-align: middle;
   text-align: center;
   margin: 3%;
+}
+
+.info, .content1, .content2, .content3 {
+  background-repeat: no-repeat;
+  background-position: bottom -1px center;
+  background-size: 100%;
 }
 
 .info {
   background-color: #96dce9;
   background-image: url(../images/curve_info.svg);
-  background-repeat: no-repeat;
-  background-position: bottom -1px center;
-  background-size: 100%;
-  padding: 30px 0;
+  padding-bottom: 30px;
 }
 
 .info .container > div {
@@ -193,22 +190,20 @@ footer {
 .info .container > div h3 {
   background-color: #087b97;
   font-weight: normal;
+  letter-spacing: 0.15em;
 }
 
 .info .container > div p {
-  padding: 10px 50px;
+  padding: 3px 50px;
 }
 
-.info img {
-  padding-bottom: 120px;
+.info .container > div p:first-of-type {
+  padding: 25px 50px;
 }
 
 .content1 {
   background-color: #ffcb25;
   background-image: url(../images/curve_content1.svg);
-  background-repeat: no-repeat;
-  background-position: bottom -1px center;
-  background-size: 100%;
 }
 
 .content1 .title {
@@ -239,78 +234,228 @@ footer {
   background-color: #fffdcc;
   padding: 40px 29px;
   border-radius: 150px;
-  height: 200px;
+  height: 190px;
   width: 250px;
   position: relative;
   top: -50px;
 }
 
 .content1 .container > div .circle p {
-  padding-top: 20px;
+  padding-top: 25px;
 }
 
 .content2 {
   background-color: #eaeaea;
   background-image: url(../images/curve_content2.svg);
-  background-repeat: no-repeat;
-  background-position: bottom -1px center;
-  background-size: 100%;
 }
 
-.content2 img:first-child {
+.content2 .container:first-child img {
   border-radius: 50%;
-  margin: 7%;
-  width: 26%;
+  margin: 6%;
+  width: 23%;
   float: left;
 }
 
-.content2 h3, .content2 ul, .content2 p {
+.content2 .container:first-child h3, .content2 .container:first-child ul, .content2 .container:first-child p {
   float: left;
-  width: 60%;
+  width: 65%;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.content2 ul {
+.content2 .container:first-child h3 {
+  margin-top: 30px;
+  font-size: 30px;
+  line-height: 1.5em;
+}
+
+.content2 .container:first-child ul {
   list-style: none;
+  font-weight: bold;
 }
 
-.content2 .title {
-  color: #2cbcc5;
+.content2 .container:last-child {
   clear: both;
 }
 
-.content2 .title::before {
+.content2 .container:last-child .title {
+  color: #2cbcc5;
+}
+
+.content2 .container:last-child .title::before {
   background-color: #2cbcc5;
 }
 
-.content2 .container > h4 {
+.content2 .container:last-child > h4 {
   color: #333;
+  padding-left: 32px;
+  margin-bottom: 10px;
 }
 
-.content2 .container > div {
+.content2 .container:last-child p {
+  font-size: 24px;
+  padding-left: 32px;
+}
+
+.content2 .container:last-child div {
   background-color: #2cbcc5;
   width: 40%;
   border-radius: 20px;
+  margin: 3% 5%;
 }
 
-.content2 .container > div img {
+.content2 .container:last-child div img {
   width: 100%;
+}
+
+.content2 .container:last-child div ul {
+  color: #FFF;
+  text-align: left;
+  padding: 20px 10px 20px 60px;
 }
 
 .content3 {
   background-color: #087b97;
   background-image: url(../images/curve_content3.svg);
-  background-repeat: no-repeat;
-  background-position: bottom -1px center;
-  background-size: 100%;
+  min-height: 650px;
 }
 
-form {
+.content3 img {
+  margin: 150px 10% 0 6%;
+  float: left;
+  width: 39%;
+}
+
+.content3 h3, .content3 ul {
+  width: 45%;
+  float: left;
+}
+
+.content3 h3 {
+  margin-top: 70px;
+}
+
+.content3 ul {
+  list-style: none;
+}
+
+.content3 ul li::before {
+  content: url(../images/checked_icon.svg);
+  position: relative;
+  top: 6px;
+  margin-right: 0.4em;
+}
+
+.content3 ul li {
+  font-size: 30px;
+  font-weight: bold;
+  color: #FFF;
+  margin-top: 25px;
+}
+
+.content3 ul li p {
+  color: #FFF;
+  font-weight: normal;
+  margin-top: 15px;
+}
+
+.contact {
   background-color: #fff;
+}
+
+.contact h3 {
+  font-size: 60px;
+  width: 800px;
+  margin: 60px auto;
+  line-height: 2em;
+  text-align: center;
+  background-color: #fff45c;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 11px #B7CFD1;
+  box-shadow: 0 11px #B7CFD1;
+}
+
+.contact form {
+  width: 700px;
+  margin: 10px auto 200px;
+}
+
+.contact #twzipcode input {
+  display: none;
+}
+
+.contact input, .contact .area {
+  width: 320px;
+  height: 48px;
+  font-size: 24px;
+  border: 1px solid #087b97;
+  text-align: left;
+  padding-left: 10px;
+  margin: 14px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.contact input::-webkit-input-placeholder {
+  color: #087b97;
+}
+
+.contact input:-ms-input-placeholder {
+  color: #087b97;
+}
+
+.contact input::-ms-input-placeholder {
+  color: #087b97;
+}
+
+.contact input::placeholder {
+  color: #087b97;
+}
+
+.contact .area {
+  color: #087b97;
+}
+
+.contact #contactEmail {
+  width: 668px;
+}
+
+.contact #contactIAgree {
+  width: 25px;
+  float: left;
+}
+
+.contact label, .contact a {
+  font-size: 24px;
+  color: #333;
+  line-height: 3em;
+  float: left;
+}
+
+.contact #submitBtn {
+  width: 147px;
+  height: 57px;
+  background-color: #ff6633;
+  border-radius: 10px;
+  color: #FFF;
+  letter-spacing: 10px;
+  padding-left: 45px;
+  margin-top: 70px;
+  border: none;
+  float: right;
+}
+
+/*content1 & content3 間距縮小*/
+@media (max-width: 1220px) {
+  .content1 .container div {
+    margin: 3% 2%;
+  }
 }
 
 @media (max-width: 1023px) {
   .container > div {
-    margin: 5% 10%;
+    margin: 3% 10%;
   }
   .info .container > div {
     width: 80%;
@@ -323,9 +468,6 @@ form {
     width: 80px;
     margin: 0 auto;
     padding: 0;
-  }
-  .content1 .container > div {
-    margin-left: auto;
   }
 }
 

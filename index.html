@@ -14,10 +14,18 @@
 	<script src="js/TWzipcode/jquery.twzipcode.min.js"></script>
 	<style>
 		#twzipcode input {display: none;}
+		/*.county {
+		    background-color: #4169E1;
+		    color: #fff;
+		}
+		.district {
+		    background-color: #008000;
+		    color: #fff;
+		}*/
 	</style>
 	<script>
 		$(document).ready(function(){
-		$('#twzipcode').twzipcode();
+		$('#twzipcode').twzipcode({'css': ['area', 'area']});
 		});
 	</script>
 </head>
@@ -37,7 +45,7 @@
 		<img src="images/banner_title.png" alt="掌握Excel VBA，工作效率秒提升">
 	</header>
 	<section class="info">
-		<h1>Excel VBA初階概念、進階實務</h1>
+		<h1>Excel VBA 初階概念、進階實務</h1>
 		<div class="container">
 			<div>
 				<h3 class="title_yellow">初階課程</h3>
@@ -65,9 +73,7 @@
 					<p class="point">一鍵巨集就做好</p>
 					<p>快速處理大量資料，減少重複性操作，避免人工失誤。</p>
 				</div>
-			</div>
-			
-			<div>
+			</div><div>
 				<p class="del">VBA語法好難懂</p>
 				<img src="images/arrow.svg" alt="">
 				<img src="images/icon2.svg" alt="">
@@ -75,9 +81,7 @@
 					<p class="point">實例操作馬上會</p>
 					<p>以最簡單常用的案例解說，初學者也能成為VBA達人。</p>
 				</div>
-			</div>
-			
-			<div>
+			</div><div>
 				<p class="del">找語法超花時間</p>
 				<img src="images/arrow.svg" alt="">
 				<img src="images/icon3.svg" alt="">
@@ -118,9 +122,7 @@
 					<li>建立進銷存系統</li>
 					<li>建立自動記錄的巨集</li>
 				</ul>
-			</div>
-			
-			<div>
+			</div><div>
 				<h4>VBA初體驗</h4>
 				<img src="images/VBA2.jpg" alt="">
 				<ul>
@@ -129,9 +131,7 @@
 					<li>資料型態和變數運用</li>
 					<li>迴圈語法、物件迴圈</li>
 				</ul>
-			</div>
-			
-			<div>
+			</div><div>
 				<h4>常用語法</h4>
 				<img src="images/VBA3.jpg" alt="">
 				<ul>
@@ -140,9 +140,7 @@
 					<li>儲存格常用語法</li>
 					<li>其他常用語法</li>
 				</ul>
-			</div>
-			
-			<div>
+			</div><div>
 				<h4>VBA中使用Excel函數</h4>
 				<img src="images/VBA4.jpg" alt="">
 				<ul>
@@ -154,27 +152,29 @@
 			</div>
 		</div>
 	</section>
-	<section class="content3">
-		<img src="images/computer.png" alt="">
-		<h3 class="title_yellow">本課程適合學習對象</h3>
-		<ul>
-			<li>任何行業Excel使用者
-				<p>秘書、業務、行銷、人資等行政相關人員</p></li>
-			<li>需使用到資料處理的使用者
-				<p>學生、行政人員、程式設計師、管理階級職員</p></li>
-			<li>有興趣提升Excel技能者
-				<p>社會新鮮人、想增加工作效率的上班族</p></li>
-		</ul>
 
+	<section class="content3">
+		<div class="container">
+			<img src="images/computer.png" alt="">
+			<h3 class="title_yellow">本課程適合學習對象</h3>
+			<ul>
+				<li>任何行業Excel使用者
+					<p>秘書、業務、行銷、人資等行政相關人員</p></li>
+				<li>需使用到資料處理的使用者
+					<p>學生、行政人員、程式設計師、管理階級職員</p></li>
+				<li>有興趣提升Excel技能者
+					<p>社會新鮮人、想增加工作效率的上班族</p></li>
+			</ul>
+		</div>
 	</section>
 
 	<section class="contact">
 		<h3>馬上索取課程資訊</h3>
 		<form name="contactForm" method="post" action="">
-			<input type="text" name="contactName" placeholder="姓 名" required="required">
+			<input type="text" name="contactName" placeholder="姓名" required="required">
 			<input type="text" name="contactMobile" placeholder="行動電話" required="required">
-			<input type="text" name="contactEmail" placeholder="E-MAIL">
 			<div id="twzipcode"></div>
+			<input type="text" id="contactEmail" name="contactEmail" placeholder="E-MAIL">
 			<input type="checkbox" id="contactIAgree" name="contactIAgree" value="1" required="required"><label for="contactIAgree">我已詳細閱讀並接受</label><a
 			onclick="window.open('http://www.pcschool.com.tw/member/Message.html','person',config='height=640,width=830');return false;"
 			href="#">個資保護聲明</a>
