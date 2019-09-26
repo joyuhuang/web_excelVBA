@@ -8,32 +8,101 @@
 	text_white: #FFF,
 	// sub-white: #96dce9
 );*/
-/*-----最上方nav導覽列---------------------------*/
+p, ul {
+  font-size: 18px;
+  color: #333;
+  letter-spacing: 1px;
+  line-height: 1.8em;
+}
+
+.title_yellow {
+  color: #feff00;
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+}
+
+.point {
+  color: #087b97;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.8em;
+}
+
+.del {
+  font-size: 24px;
+  font-weight: bold;
+  color: #087b97;
+  text-decoration: line-through;
+}
+
+.title {
+  font-size: 36px;
+  padding-top: 30px;
+  line-height: 1.5em;
+}
+
+.title::before {
+  content: "";
+  display: inline-block;
+  width: 0.4em;
+  height: 1.5em;
+  position: relative;
+  top: 0.4em;
+  margin-right: 0.4em;
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+  color: #FFF;
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 1.5em;
+}
+
+h4 {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 2em;
+  color: #fffdcc;
+}
+
 .topbar {
   height: 70px;
+  float: right;
 }
 
 #logo {
-  height: 36px;
+  height: 70px;
+  margin-left: 1%;
 }
 
 .topbar li {
   list-style: none;
-  float: left;
+  display: inline-block;
 }
 
 .topbar li a {
   padding: 25px;
+  text-decoration: none;
+  color: #666666;
+  line-height: 70px;
+  font-size: 18px;
 }
 
 /*-----header banner 手機版型----------------------*/
 header {
+  background-image: url(../images/banner_bg2.jpg);
   height: 750px;
   width: 100%;
   margin: auto;
   background-size: contain;
   background-repeat: no-repeat;
   background-color: #2cbcc5;
+  position: relative;
 }
 
 /*-----header banner 平板版型----------------------*/
@@ -51,8 +120,28 @@ header {
   }
 }
 
-header h1 {
-  text-indent: -9999px;
+header img {
+  max-width: 630px;
+  width: 300px;
+  width: 60vw;
+  display: block;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -1px;
+  display: block;
+  background-image: url(../images/curve_header.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 footer {
@@ -76,40 +165,37 @@ footer {
 .container {
   max-width: 1140px;
   margin: 0 auto;
-  padding-bottom: 150px;
+  padding: 0 3% 5%;
 }
 
-p {
-  font-size: 18px;
-  color: #333;
+.container > div {
+  display: inline-block;
+  text-align: center;
+  margin: 3%;
 }
 
 .info {
   background-color: #96dce9;
-  background-image: url(../images/info_curve.svg);
+  background-image: url(../images/curve_info.svg);
   background-repeat: no-repeat;
   background-position: bottom -1px center;
   background-size: 100%;
-  padding: 30px;
+  padding: 30px 0;
 }
 
-.info .container div {
+.info .container > div {
   background-color: #fff;
-  display: inline-block;
-  width: 35%;
-  margin: 5%;
+  width: 39%;
   padding: 30px 0;
   border-radius: 30px;
-  text-align: center;
 }
 
-.info .container div h3 {
+.info .container > div h3 {
   background-color: #087b97;
-  line-height: 1.5em;
   font-weight: normal;
 }
 
-.info .container div p {
+.info .container > div p {
   padding: 10px 50px;
 }
 
@@ -119,30 +205,100 @@ p {
 
 .content1 {
   background-color: #ffcb25;
-  background-image: url(../images/content1_curve.svg);
+  background-image: url(../images/curve_content1.svg);
   background-repeat: no-repeat;
   background-position: bottom -1px center;
   background-size: 100%;
 }
 
-.circle {
+.content1 .title {
+  color: #333;
+}
+
+.content1 .title::before {
+  background-color: #333;
+}
+
+.content1 .container > div {
+  position: relative;
+}
+
+.content1 .container > div img:first-of-type {
+  position: absolute;
+  left: -5px;
+  z-index: 1;
+}
+
+.content1 .container > div img:last-of-type {
+  position: relative;
+  top: 20px;
+  z-index: 1;
+}
+
+.content1 .container > div .circle {
   background-color: #fffdcc;
-  width: 22%;
-  padding: 50px 30px;
-  border-radius: 135px;
+  padding: 40px 29px;
+  border-radius: 150px;
+  height: 200px;
+  width: 250px;
+  position: relative;
+  top: -50px;
+}
+
+.content1 .container > div .circle p {
+  padding-top: 20px;
 }
 
 .content2 {
   background-color: #eaeaea;
-  background-image: url(../images/content2_curve.svg);
+  background-image: url(../images/curve_content2.svg);
   background-repeat: no-repeat;
   background-position: bottom -1px center;
   background-size: 100%;
 }
 
+.content2 img:first-child {
+  border-radius: 50%;
+  margin: 7%;
+  width: 26%;
+  float: left;
+}
+
+.content2 h3, .content2 ul, .content2 p {
+  float: left;
+  width: 60%;
+}
+
+.content2 ul {
+  list-style: none;
+}
+
+.content2 .title {
+  color: #2cbcc5;
+  clear: both;
+}
+
+.content2 .title::before {
+  background-color: #2cbcc5;
+}
+
+.content2 .container > h4 {
+  color: #333;
+}
+
+.content2 .container > div {
+  background-color: #2cbcc5;
+  width: 40%;
+  border-radius: 20px;
+}
+
+.content2 .container > div img {
+  width: 100%;
+}
+
 .content3 {
   background-color: #087b97;
-  background-image: url(../images/content3_curve.svg);
+  background-image: url(../images/curve_content3.svg);
   background-repeat: no-repeat;
   background-position: bottom -1px center;
   background-size: 100%;
@@ -152,22 +308,25 @@ form {
   background-color: #fff;
 }
 
-.title_yellow {
-  color: #feff00;
-  font-size: 48px;
-  font-weight: bold;
-}
-
-.point {
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.text_b30 {
-  font-size: 30px;
-  color: #087b97;
-  font-weight: bold;
-  line-height: 1.8em;
+@media (max-width: 1023px) {
+  .container > div {
+    margin: 5% 10%;
+  }
+  .info .container > div {
+    width: 80%;
+  }
+  .info img {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    display: block;
+    width: 80px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .content1 .container > div {
+    margin-left: auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

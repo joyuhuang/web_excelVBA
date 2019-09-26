@@ -1,20 +1,71 @@
+$fontSizes: (
+	big_title: 48px,	//大標題字: 黃色的大標題(用在.info & .content3)
+	title1: 36px,	//作為醒目標題的文字: 前面有方塊的標題(用在.content1 & .content2)
+	title2: 30px,	//作為一般標題的文字: 深色主色的標題(用在.info & .content1)
+	small_title: 24px,	//刪除的標題文字(用在.content1)
+	text: 18px	//一般p的文字
+	);
+
+
+
+p,ul {
+    font-size: map-get($fontSizes, text);
+    color: #333;
+	letter-spacing: 1px;
+	line-height: 1.8em;
+}
+// 黃色的標題字-------------------------
 .title_yellow {
 	color: #feff00;
-	font-size: 48px;
+	font-size: map-get($fontSizes, big_title);
 	font-weight: bold;
+	letter-spacing: 0.15em;
 }
+// 深主色的重點文字----------------------
 .point {
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.del {
-
-}
-
-.text_b30 {
-	font-size: 30px;
-	color: #087b97;
+	color: map-get($colors, dark);
+	font-size: map-get($fontSizes, title2);
 	font-weight: bold;
 	line-height: 1.8em;
+}
+// 畫刪除線的文字------------------------
+.del {
+	font-size: map-get($fontSizes, small_title);
+	font-weight: bold;
+	color: map-get($colors, dark);
+	text-decoration: line-through;
+}
+// 前面有小方塊的標題---------------------
+.title {
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 0.4em;
+        height: 1.5em;
+        position: relative;
+        top: 0.4em;
+        margin-right: 0.4em;
+    }
+    font-size: map-get($fontSizes, title1);
+    padding-top: 30px;
+    line-height: 1.5em;
+}
+
+h1 {
+    // text-indent: -9999px;
+    text-align: center;
+    font-size: map-get($fontSizes, title2);
+    color: #FFF;
+}
+// 老師介紹的老師名字(其他h3會被各自的class覆蓋過去)
+h3 {
+	font-size: 30px;
+	line-height: 1.5em;
+}
+// .content2中4個課程介紹方塊的標題
+h4 {
+	font-size: 32px;
+	font-weight: bold;
+	line-height: 2em;
+	color: map-get($colors, second_light);
 }

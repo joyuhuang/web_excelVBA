@@ -12,82 +12,144 @@
     margin: 0;
     padding: 0;
 }
+
 .container {
     max-width: $container_h;
     margin: 0 auto;
-    padding-bottom: 150px;
+    padding: 0 3% 5%;
 }
-p {
-    font-size: 18px;
-    color: #333;
+.container>div {
+        display: inline-block;
+        text-align: center;
+        margin:3%;
+
 }
+
 
 // -----課程資訊-----------------------------
 .info {
     background-color: map-get($colors, light);
-    background-image: url(../images/info_curve.svg);
+    background-image: url(../images/curve_info.svg);
     background-repeat: no-repeat;
     background-position: bottom -1px center;
     background-size: 100%;
-    padding: 30px;
+    padding: 30px 0;
     // -----白色圓角區塊----------------------
-    .container div {
+    .container>div {
         background-color: #fff;
-        display: inline-block;
-        width: 35%;
-        margin:5%;
+        width: 39%;
         padding: 30px 0;
         border-radius: 30px;
-        text-align: center;
         // 深底黃字標題-----------------------
         h3 {
             background-color: map-get($colors, dark);
-            line-height: 1.5em;
             font-weight: normal;
         }
         // 課程名稱&資訊----------------------
-        p {
-            padding: 10px 50px;
-        }
+        p {padding: 10px 50px;}
     }
     // -----黃色箭頭---------------------------
-    img {
-        padding-bottom: 120px;
-    }
+    img {padding-bottom: 120px;}
 }
 // -----課程資訊end--------------------------
 // -----課程優點-----------------------------
 .content1 {
     background-color: map-get($colors, second);
-    background-image: url(../images/content1_curve.svg);
+    background-image: url(../images/curve_content1.svg);
     background-repeat: no-repeat;
     background-position: bottom -1px center;
     background-size: 100%;
-}
-.circle {
-    background-color: map-get($colors, second_light);
-    width: 22%;
-    padding: 50px 30px;
-    border-radius: 135px;
-}
+    .title {
+        &::before {background-color: #333;}
+        color: #333;
+    }
+    // 各項優點的外框------------------------
+    .container>div {
+        position: relative;
 
+        img:first-of-type {
+            position: absolute;
+            left: -5px;
+            z-index: 1;
+        }
+        img:last-of-type {
+            position: relative;
+            top: 20px;
+            z-index: 1;
+        }
+        // 優點內容的淺黃橢圓區塊-----------------
+        .circle {
+            background-color: map-get($colors, second_light);
+            padding: 40px 29px;
+            border-radius: 150px;
+            height: 200px;
+            width: 250px;
+            position: relative;
+            top: -50px;
+            p {
+                padding-top: 20px;
+            }
+        }
+    }
+}
+// -----課程優點end--------------------------
 // -----老師及課程介紹------------------------
 .content2 {
     background-color: map-get($colors, note);
-    background-image: url(../images/content2_curve.svg);
+    background-image: url(../images/curve_content2.svg);
     background-repeat: no-repeat;
     background-position: bottom -1px center;
     background-size: 100%;
+    // 老師介紹的部分------------------------
+    img:first-child {
+        border-radius: 50%;
+        margin: 7%;
+        width: 26%;
+        float: left;
+    }
+    h3,ul,p {
+        float: left;
+        width: 60%;
+    }
+    ul {list-style: none;}
+
+    // 課程介紹的部分------------------------
+
+    .title {
+        &::before {
+            background-color: map-get($colors, primary);
+        }
+        color: map-get($colors, primary);
+        clear: both;
+    }
+    .container>h4 {
+        color: #333;
+    }
+    .container>div {
+        background-color: map-get($colors, primary);
+        width: 40%;
+        border-radius: 20px;
+        h4 {
+
+        }
+        img {   //VBA1.jpg~VBA4.jpg
+            width: 100%;
+        }
+    }
 }
+
+// -----老師及課程介紹end---------------------
 // -----適合對象------------------------------
 .content3 {
     background-color: map-get($colors, dark);
-    background-image: url(../images/content3_curve.svg);
+    background-image: url(../images/curve_content3.svg);
     background-repeat: no-repeat;
     background-position: bottom -1px center;
     background-size: 100%;
 }
+// -----適合對象end---------------------------
 // -----索取資訊表單--------------------------
 form {
     background-color: #fff;
 }
+// -----索取資訊表單end-----------------------
