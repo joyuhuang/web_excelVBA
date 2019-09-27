@@ -1,0 +1,193 @@
+/*=====課程資訊=================================*/
+@media (max-width: 1015px){
+.info img {
+width: 80px;
+}
+}
+@media (max-width: 989px){
+.info .container>div {
+margin: 3% 2.5%;
+}
+
+}
+/*變單欄排版--------------------------*/
+@media (max-width: 815px) {
+/*	弧形造型弄扁一點-----------*/
+	header::after, .info, .content1, .content2, .content3 {background-size: 100% 30px;}
+	.info .container>div {margin: 3% 10%;}
+	
+	h1 {padding-top: 20px;}
+	.info .container>div {width: 80%;}/* 白色圓角區塊*/
+	.info img {/* 黃色箭頭*/
+		transform: rotate(90deg);
+		display: block;
+		width: 80px;
+		margin: 0 auto;
+		padding: 0;
+	}
+}
+/*=====課程優點=================================*/
+@media (max-width: 1215px) {
+	.content1 .container>div {
+		margin: 3% 10%;
+	}
+	.content1 .container>div:nth-of-type(3) {
+		display: block;
+		margin: 0 auto 30px;
+	}
+}
+@media (max-width: 1110px) {
+	.content1 .container>div {margin: 3% 9%;}
+}
+@media (max-width: 1040px) {
+	.content1 .container>div {margin: 3% 7%;}
+}
+@media (max-width: 930px) {
+	.content1 .container>div {margin: 3% 5.5%;}
+}
+@media (max-width: 860px) {
+	.content1 .container>div {margin: 3% 4.1%;	}
+}
+@media (max-width: 800px){
+	.content1 {
+	min-height: 1320px;
+}
+	.content1 .container>div {
+		display: block;
+		width: 410px;
+		height: 400px;
+		margin: auto;
+	}
+	.content1 .del {
+/*		float: left;*/
+/*		text-align: left;*/
+		text-indent: 10px;
+		padding-top: 20px;
+		width: 240px;
+	}
+	.content1 .container>div img:first-of-type  {
+/*		float: left;*/
+		transform: rotate(-50deg) scaleX(-1);
+		left: 270px;
+		top: -10px;
+	}
+	.content1 .container>div img:last-of-type  {
+		position: absolute;
+		float: left;
+		top: 100px;
+		left: 0;
+		
+	}
+	.content1 .container>div .circle  {
+		position: absolute;
+		float: left;
+		top: 100px;
+		left: 100px;
+		margin: 0;
+		
+	}
+}
+/*=====老師及課程介紹==========================*/
+@media (max-width: 1015px){
+	.content2 .container:first-child img {
+		width: 215px;
+	}
+	.content2 .container:first-child h3, .content2 .container:first-child ul, .content2 .container:first-child p {
+		max-width: 60%;		
+	}
+}
+@media (max-width: 835px){
+	.content2 .container:first-child {
+		padding-top: 50px;
+	}
+	.content2 .container:first-child img {
+		width: 250px;
+		float: none;
+		display: block;
+		margin: 0 auto;
+/*		padding-top: 70px;*/
+	}
+	.content2 .container:first-child h3, .content2 .container:first-child ul, .content2 .container:first-child p {
+		float: none;
+		width: auto;
+		max-width: none;
+	}
+	.content2 .container:last-child div{
+		width: 80%;
+		margin: 3% 10%;
+	}
+}
+
+/*=====適合對象================================*/
+@media (max-width: 1040px){
+/*	.content3 h3 {font-size: 36px;}*/
+	.content3 img {
+		width: 30%;
+	}
+	.content3 h3, .content3 ul {
+  		width: 54%;
+	}
+}
+@media (max-width: 875px){
+	.content3 .container {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		max-width: 450px;
+	}
+	.content3 img {
+		float: none;
+		width: 250px;
+		display: block;
+		margin: 0 auto 20px;
+	}
+	.content3 h3, .content3 ul {
+		float: none;
+		width: auto;
+		margin: 0;
+	}
+}
+
+/*=====索取資訊表單===========================*/
+
+@media (max-width: 860px){
+	.contact h3 {
+		font-size: 50px;
+		width: 600px;
+	}
+	.contact form {
+		width: 554px;
+		margin-bottom: 80px;
+	}
+	.contact input, .contact  #contactEmail {
+		width: 528px;
+	}
+	.contact .area {
+		width: 249px;
+	}
+	.contact #submitBtn {
+		float: none;
+		display: block;
+		margin: 15px auto;
+
+	}
+}
+@media (max-width: 650px){
+	.contact h3 {
+		font-size: 40px;
+		width: 450px;
+	}
+	.contact form {
+		width: 350px;
+	}
+	.contact input, .contact  #contactEmail,.contact .area {
+		width: 328px;
+		margin: 10px;
+	}
+	.contact label,.contact a {
+		font-size: 20px;
+	}
+	.contact #submitBtn {
+		
+
+	}
+}

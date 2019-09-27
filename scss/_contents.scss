@@ -230,6 +230,7 @@
     form {
 		width: 700px;
 		margin: 10px auto 200px;
+		position: relative;
     }
     #twzipcode input {display: none;}
     input, .area {
@@ -255,13 +256,16 @@
 		width: 25px;
 		// text-align: left;
 		// margin: 5px 14px;
-		float: left;
+		// float: left;
+
 	}
 	label, a {
 		font-size: 24px;
 		color: #333;
 		line-height: 3em;
-		float: left;
+		position: relative;
+		top: -15px;
+		// float: left;
 	}
 	#submitBtn {
 		width: 147px;

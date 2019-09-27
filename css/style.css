@@ -90,11 +90,11 @@ h4 {
 
 /*-----header banner 手機版型----------------------*/
 header {
-  background-image: url(../images/banner_bg2.jpg);
-  height: 750px;
+  background-image: url(../images/banner_bgm.jpg);
+  height: auto;
   width: 100%;
   margin: auto;
-  background-size: contain;
+  background-size: 100% auto;
   background-repeat: no-repeat;
   background-color: #2cbcc5;
   position: relative;
@@ -103,25 +103,30 @@ header {
 /*-----header banner 平板版型----------------------*/
 @media (min-width: 768px) {
   header {
-    background-image: url(../images/banner_bg.jpg);
+    background-image: url(../images/banner_bgt.jpg);
+    background-size: cover;
+    background-position: center bottom;
+  }
+  .topbar {
+    display: none;
   }
 }
 
 /*-----header banner 桌機版型----------------------*/
 @media (min-width: 1300px) {
   header {
+    background-image: url(../images/banner_bg.jpg);
     background-position: center top;
     background-size: auto;
   }
 }
 
 header img {
-  max-width: 630px;
+  max-width: 620px;
   width: 300px;
-  width: 60vw;
+  width: 80vw;
   display: block;
-  padding-bottom: 5%;
-  padding-top: 5%;
+  padding: 5% 0 350px 0;
   margin-left: auto;
   margin-right: auto;
 }
@@ -379,6 +384,7 @@ footer p {
 .contact form {
   width: 700px;
   margin: 10px auto 200px;
+  position: relative;
 }
 
 .contact #twzipcode input {
@@ -423,14 +429,14 @@ footer p {
 
 .contact #contactIAgree {
   width: 25px;
-  float: left;
 }
 
 .contact label, .contact a {
   font-size: 24px;
   color: #333;
   line-height: 3em;
-  float: left;
+  position: relative;
+  top: -15px;
 }
 
 .contact #submitBtn {
@@ -453,7 +459,8 @@ footer p {
   }
 }
 
-@media (max-width: 1023px) {
+/*=====手機版=================================*/
+@media (max-width: 720px) {
   .container > div {
     margin: 3% 10%;
   }
