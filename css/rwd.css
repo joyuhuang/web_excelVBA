@@ -1,21 +1,13 @@
 /*=====課程資訊=================================*/
 @media (max-width: 1015px){
-.info img {
-width: 80px;
-}
+.info img {width: 80px;}
 }
 @media (max-width: 989px){
-.info .container>div {
-margin: 3% 2.5%;
-}
-
+.info .container>div {margin: 3% 2.5%;}
 }
 /*變單欄排版--------------------------*/
 @media (max-width: 815px) {
 /*	弧形造型弄扁一點-----------*/
-	header::after, .info, .content1, .content2, .content3 {background-size: 100% 30px;}
-	.info .container>div {margin: 3% 10%;}
-	
 	h1 {padding-top: 20px;}
 	.info .container>div {width: 80%;}/* 白色圓角區塊*/
 	.info img {/* 黃色箭頭*/

@@ -1,0 +1,21 @@
+
+* {
+    font-family: $font_family;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: $container_h;
+    margin: 0 auto;
+    padding: 0 3% 2%;
+    // box-sizing: border-box;
+}
+.container>div {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        margin:3%;
+}
+
+

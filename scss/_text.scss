@@ -1,16 +1,16 @@
 $fontSizes: (
-	big_title: 48px,	//大標題字: 黃色的大標題(用在.info & .content3)
-	title1: 36px,	//作為醒目標題的文字: 前面有方塊的標題(用在.content1 & .content2)
-	title2: 30px,	//作為一般標題的文字: 深色主色的標題(用在.info & .content1)
+	big_title: 36px,	//大標題字: 黃色的大標題(用在.info & .content3)
+	title1: 30px,	//作為醒目標題的文字: 前面有方塊的標題(用在.content1 & .content2)
+	title2: 24px,	//作為一般標題的文字: 深色主色的標題(用在.info & .content1)
 	small_title: 26px,	//刪除的標題文字(用在.content1)
-	text: 18px	//一般p的文字
+	text: 16px	//一般p的文字
 	);
 
 
 
 p,ul {
     font-size: map-get($fontSizes, text);
-    color: #333;
+    color: #222;
 	letter-spacing: 1px;
 	line-height: 1.5em;
 }
@@ -57,14 +57,21 @@ p,ul {
 h1 {
     // text-indent: -9999px;
     text-align: center;
-    font-size: map-get($fontSizes, title2);
-    color: #FFF;
+    font-size: map-get($fontSizes, title1);
+	color: #0d86a3;
+	// padding-top: 30px;
 }
 
 // .content2中4個課程介紹方塊的標題
 h4 {
-	font-size: 32px;
+	font-size: 26px;
 	font-weight: bold;
 	line-height: 2em;
-	color: map-get($colors, second_light);
+	color: #222;
+}
+
+// 表單區塊的大標題
+.contact h3 {
+	font-size: 60px;
+	color: #39616b;
 }
