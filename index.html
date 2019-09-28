@@ -10,16 +10,25 @@
 	<META NAME="Description" CONTENT="擁有VBA技能薪資也跟著升級！老師將一步步帶領大家學會錄製巨集、簡易VBA撰寫及函數、語法的用運，初學者也可以輕鬆學習，立刻解決工作上遇到的問題。">
 	<META NAME="keywords" CONTENT="IT360,Excel VBA,巨集,VBA語法,函數 ">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/rwd.css">
+	<link rel="stylesheet" href="css/animate.css">
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/TWzipcode/jquery.twzipcode.min.js"></script>
 
 	<script>
+		$(function() {
+			
+		});
 		$(document).ready(function(){
 		$('#twzipcode').twzipcode({'css': ['area', 'area']});
 		});
 	</script>
 </head>
 <body>
+	<script src="js/wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
 	<nav>
 		<img id="logo" src="images/logo_it360.png" alt="巨匠電腦">
 		<ul class="topbar">
@@ -32,9 +41,9 @@
 		</ul>
 	</nav>
 	<header>
-		<img src="images/banner_title.png" alt="掌握Excel VBA，工作效率秒提升">
+		<img src="images/banner_title.png" alt="掌握Excel VBA，工作效率秒提升" class="wow zoomIn wHighlight">
 	</header>
-	<section class="info">
+	<section class="info wow fadeInLeftBig">
 		<h1>Excel VBA 初階概念、進階實務</h1>
 		<div class="container">
 			<div>
@@ -52,7 +61,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="content1">
+	<section class="content1 info wow fadeInRightBig" data-wow-delay="0.5s">
 		<div class="container">
 			<h3 class="title">使用Excel，你是否也有這樣的困擾？</h3>
 			<div>
@@ -85,7 +94,7 @@
 		</div>
 	</section>
 	<section class="content2">
-		<div class="container">
+		<div class="container wow zoomInRight">
 			<img src="images/teacher_s.jpg" alt="蘇世榮老師">
 			<h3>蘇世榮老師</h3>
 			<ul>
@@ -105,7 +114,7 @@
 			<h4>簡單案例教學，80組語法一次掌握</h4>
 			<p>根據人力銀行顯示，擁有VBA技能薪資也跟著升級！在這兩門初階、進階課程中，老師將一步步帶領大家學會錄製巨集、簡易VBA撰寫及函數、語法的用運，不會Excel函數、不會寫程式也可以輕鬆學習。並運用實際案例來操作說明，能立刻解決工作上遇到的問題。</p>
 			
-			<div>
+			<div class="wow bounceInDown">
 				<h4>錄製巨集的技巧</h4>
 				<img src="images/VBA1.jpg" alt="">
 				<ul>
@@ -114,7 +123,7 @@
 					<li>建立進銷存系統</li>
 					<li>建立自動記錄的巨集</li>
 				</ul>
-			</div><div>
+			</div><div class="wow bounceInDown">
 				<h4>VBA初體驗</h4>
 				<img src="images/VBA2.jpg" alt="">
 				<ul>
@@ -123,7 +132,7 @@
 					<li>資料型態和變數運用</li>
 					<li>迴圈語法、物件迴圈</li>
 				</ul>
-			</div><div>
+			</div><div class="wow bounceInUp">
 				<h4>常用語法</h4>
 				<img src="images/VBA3.jpg" alt="">
 				<ul>
@@ -132,7 +141,7 @@
 					<li>儲存格常用語法</li>
 					<li>其他常用語法</li>
 				</ul>
-			</div><div>
+			</div><div class="wow bounceInUp">
 				<h4>VBA中使用Excel函數</h4>
 				<img src="images/VBA4.jpg" alt="">
 				<ul>
@@ -146,7 +155,7 @@
 	</section>
 
 	<section class="content3">
-		<div class="container">
+		<div class="container wow fadeInRightBig">
 			<img src="images/computer.png" alt="">
 			<h3 class="title_yellow">本課程適合學習對象</h3>
 			<ul>
@@ -161,7 +170,7 @@
 	</section>
 
 	<section class="contact">
-		<h3>馬上索取課程資訊</h3>
+		<h3 class="wow pulse" style="animation-iteration-count: infinite;">馬上索取課程資訊</h3>
 		<form name="contactForm" method="post" action="">
 			<input type="text" name="contactName" placeholder="姓名" required="required">
 			<input type="text" name="contactMobile" placeholder="行動電話" required="required">

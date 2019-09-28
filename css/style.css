@@ -32,9 +32,14 @@ p, ul {
   font-size: 26px;
   font-weight: bold;
   color: #2a95af;
-  text-decoration: line-through;
+	animation: myAnimation 5s ease 3s infinite normal;
 }
 
+@keyframes myAnimation
+{
+  from { text-decoration: line-through; text-decoration-color: red }
+  to { text-decoration: line-through; text-decoration-color: red }
+}
 .title {
   font-size: 30px;
   padding-top: 30px;
