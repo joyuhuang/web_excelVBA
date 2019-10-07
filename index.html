@@ -27,6 +27,13 @@
 <body>
 	<script src="js/wow.min.js"></script>
 	<script>
+		var wow = new WOW({
+    		boxClass: 'wow',
+			animateClass: 'animated',
+			offset: 0,
+			mobile: true,
+			live: true
+		});
 		new WOW().init();
 	</script>
 	<nav>
@@ -43,55 +50,59 @@
 	<header>
 		<img src="images/banner_title.png" alt="掌握Excel VBA，工作效率秒提升" class="wow zoomIn wHighlight">
 	</header>
-	<section class="info wow fadeInLeftBig">
-		<h1>Excel VBA 初階概念、進階實務</h1>
-		<div class="container">
-			<div>
-				<h3 class="title_yellow">初階課程</h3>
-				<p class="point">Excel VBA初階概念：入門超easy，工作效率翻倍提升</p>
-				<p>課程時數：4小時53分</p>
-				<p>先備能力：Excel基本操作能力</p>
+	<section class="info">
+		<section class="wow fadeInLeftBig">
+			<h1>Excel VBA 初階概念、進階實務</h1>
+			<div class="container">
+				<div>
+					<h3 class="title_yellow">初階課程</h3>
+					<p class="point">Excel VBA初階概念：入門超easy，工作效率翻倍提升</p>
+					<p>課程時數：4小時53分</p>
+					<p>先備能力：Excel基本操作能力</p>
+				</div>
+				<img src="images/arrow_info.svg" alt="">
+				<div>
+					<h3 class="title_yellow">進階課程</h3>
+					<p class="point">Excel VBA進階實務：80組常用函數語法一次通通掌握</p>
+					<p>課程時數：5小時46分</p>
+					<p>先備能力：上過Excel VBA初階概念者</p>
+				</div>
 			</div>
-			<img src="images/arrow_info.svg" alt="">
-			<div>
-				<h3 class="title_yellow">進階課程</h3>
-				<p class="point">Excel VBA進階實務：80組常用函數語法一次通通掌握</p>
-				<p>課程時數：5小時46分</p>
-				<p>先備能力：上過Excel VBA初階概念者</p>
-			</div>
-		</div>
+		</section>
 	</section>
-	<section class="content1 wow fadeInRightBig" data-wow-delay="0.5s">
-		<div class="container">
-			<h3 class="title">使用Excel，你是否也有這樣的困擾？</h3>
-			<div>
-				<p class="del">海量資料土法煉鋼</p>
-				<img src="images/arrow.svg" alt="">
-				<img src="images/icon1.svg" alt="">
-				<div class="circle">
-					<p class="point">一鍵巨集就做好</p>
-					<p>快速處理大量資料，減少重複性操作，避免人工失誤。</p>
+	<section class="content1">
+		<section class="wow fadeInRightBig" data-wow-delay="0.5s">
+			<div class="container">
+				<h3 class="title">使用Excel，你是否也有這樣的困擾？</h3>
+				<div>
+					<p class="del">海量資料土法煉鋼</p>
+					<img src="images/arrow.svg" alt="">
+					<img src="images/icon1.svg" alt="">
+					<div class="circle">
+						<p class="point">一鍵巨集就做好</p>
+						<p>快速處理大量資料，減少重複性操作，避免人工失誤。</p>
+					</div>
+				</div>
+				<div>
+					<p class="del">VBA語法好難懂</p>
+					<img src="images/arrow.svg" alt="">
+					<img src="images/icon2.svg" alt="">
+					<div class="circle">
+						<p class="point">實例操作馬上會</p>
+						<p>以最簡單常用的案例解說，初學者也能成為VBA達人。</p>
+					</div>
+				</div>
+				<div>
+					<p class="del">找語法超花時間</p>
+					<img src="images/arrow.svg" alt="">
+					<img src="images/icon3.svg" alt="">
+					<div class="circle">
+						<p class="point">語法字典看這裡</p>
+						<p>80組必學語法全收錄，工作馬上可以用，還可自行修改。</p>
+					</div>
 				</div>
 			</div>
-			<div>
-				<p class="del">VBA語法好難懂</p>
-				<img src="images/arrow.svg" alt="">
-				<img src="images/icon2.svg" alt="">
-				<div class="circle">
-					<p class="point">實例操作馬上會</p>
-					<p>以最簡單常用的案例解說，初學者也能成為VBA達人。</p>
-				</div>
-			</div>
-			<div>
-				<p class="del">找語法超花時間</p>
-				<img src="images/arrow.svg" alt="">
-				<img src="images/icon3.svg" alt="">
-				<div class="circle">
-					<p class="point">語法字典看這裡</p>
-					<p>80組必學語法全收錄，工作馬上可以用，還可自行修改。</p>
-				</div>
-			</div>
-		</div>
+		</section>
 	</section>
 	<section class="content2">
 		<div class="container wow zoomInRight">
