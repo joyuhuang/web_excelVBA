@@ -32,12 +32,12 @@ p, ul {
   font-size: 26px;
   font-weight: bold;
   color: #2a95af;
-	animation: myAnimation 5s ease 3s infinite normal;
+	animation: myAnimation 2s ease 3s infinite normal;
 }
 
 @keyframes myAnimation
 {
-  from { text-decoration: line-through; text-decoration-color: red }
+  from { text-decoration: line-through; text-decoration-color: transparent }
   to { text-decoration: line-through; text-decoration-color: red }
 }
 .title {
