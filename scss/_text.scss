@@ -1,12 +1,16 @@
-$fontSizes: (
-	big_title: 36px,	//大標題字: 黃色的大標題(用在.info & .content3)
-	title1: 30px,	//作為醒目標題的文字: 前面有方塊的標題(用在.content1 & .content2)
-	title2: 24px,	//作為一般標題的文字: 深色主色的標題(用在.info & .content1)
-	small_title: 26px,	//刪除的標題文字(用在.content1)
-	text: 16px	//一般p的文字
-	);
-
-
+$fontSizes: (							//預設文字大小16px=1em
+	text: 1em,							//16px,用在p & ul
+	title_yellow: 2.25em,		//36px,用在.info&.students
+	del: 1.5em,							//24px,用在.advantage
+	title: 1.875em,					//30px,用在.advantage&.classIntro
+	point: 1.875em,					//30px,用在.info&.advantage
+	h1: 1.875em,						//30px,在.info
+	teacher_h3: 1.875em,		//30px,在.teacher中的老師名字
+	classPoints_h4: 1.625em,//26px,4個課程重點方塊的標題
+	student_li: 1.625em,		//30px,在.student的項目標題
+	student_p: 0.6em,				//18px (會繼承li的大小，所以是30px*0.6),在.student的項目說明文字
+	contact_h3: 3.75em			//60px,表單區塊的大標題
+);
 
 p,ul {
     font-size: map-get($fontSizes, text);
@@ -17,19 +21,19 @@ p,ul {
 // 黃色的標題字-------------------------
 .title_yellow {
 	color: #feff00;
-	font-size: map-get($fontSizes, big_title);
+	font-size: map-get($fontSizes, title_yellow);
 	font-weight: bold;
 	line-height: 1.5em;
 }
 // 深主色的重點文字----------------------
 .point {
 	color: map-get($colors, dark);
-	font-size: map-get($fontSizes, title2);
+	font-size: map-get($fontSizes, point);
 	font-weight: bold;
 }
 // 畫刪除線的文字------------------------
 .del {
-	font-size: map-get($fontSizes, small_title);
+	font-size: map-get($fontSizes, del);
 	font-weight: bold;
 	color: map-get($colors, dark);
 	text-decoration: line-through;
@@ -45,9 +49,9 @@ p,ul {
         top: 0.4em;
         margin-right: 0.4em;
     }
-    font-size: map-get($fontSizes, title1);
-    padding-top: 30px;
-    margin-bottom: 20px;
+    font-size: map-get($fontSizes, title);
+    padding-top: 35px;
+    margin-bottom: 15px;
     line-height: 1.5em;
     // position: relative;
     // left: -0.8em;
@@ -55,23 +59,81 @@ p,ul {
 }
 
 h1 {
-    // text-indent: -9999px;
-    text-align: center;
-    font-size: map-get($fontSizes, title1);
+	// text-indent: -9999px;
+	text-align: center;
+	font-size: map-get($fontSizes, h1);
 	color: #0d86a3;
-	// padding-top: 30px;
+	padding-top: 35px;
 }
-
-// .content2中4個課程介紹方塊的標題
+// 老師介紹中的老師名字
+.teacher h3 {
+	font-size: map-get($fontSizes, teacher_h3);
+	line-height: 1.5em;
+	margin-top: 30px;
+}
+// .classPoints中4個課程重點方塊的標題
 h4 {
-	font-size: 26px;
+	font-size:  map-get($fontSizes, classPoints_h4);
 	font-weight: bold;
-	line-height: 2em;
+	// line-height: 2em;
 	color: #222;
+	padding: 0.5em 0;
 }
-
+// 適合學習對象的項目標題
+.students ul li {
+	font-size: map-get($fontSizes, student_li);
+	font-weight: bold;
+	color: #FFF;
+	margin-top: 25px;
+}
+// 適合學習對象的項目中的說明文字
+.students ul li p {
+	font-size: map-get($fontSizes, student_p);
+	color: #FFF;
+	font-weight: normal;
+	margin-top: 15px;
+}
 // 表單區塊的大標題
 .contact h3 {
-	font-size: 60px;
+	font-size:  map-get($fontSizes, contact_h3);
 	color: #39616b;
+}
+
+/*RWD文字縮小==================================*/
+@media (max-width: 480px) {
+	p,ul {
+		font-size: map-get($fontSizes, text) - 0.125em;
+	}
+	.title_yellow {// 黃色的標題字
+		font-size: map-get($fontSizes, title_yellow) - 0.2em;
+	}
+	.point {// 深主色的重點文字
+		font-size: map-get($fontSizes, point) - 0.2em;
+	}
+	.del {// 畫刪除線的文字
+		font-size: map-get($fontSizes, del) - 0.3em;
+	}
+	.title {// 前面有小方塊的標題
+			font-size: map-get($fontSizes, title) - 0.3em;
+	}
+
+	h1 {
+		font-size: map-get($fontSizes, h1) - 0.2em;
+	}
+	.teacher h3 {// 老師介紹中的老師名字
+		font-size: map-get($fontSizes, teacher_h3) - 0.2em;
+	}
+	h4 {// .classPoints中4個課程重點方塊的標題
+		font-size:  map-get($fontSizes, classPoints_h4) - 0.2em;
+	}
+	.students ul li {// 適合學習對象的項目標題
+		font-size: map-get($fontSizes, student_li) - 0.2em;
+		margin-top: 25px;
+	}
+	.students ul li p {// 適合學習對象的項目中的說明文字
+		font-size: map-get($fontSizes, student_p) - 0.2em;
+	}
+	.contact h3 {// 表單區塊的大標題
+		font-size:  map-get($fontSizes, contact_h3) - 0.2em;
+	}
 }

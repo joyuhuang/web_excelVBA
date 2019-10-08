@@ -1,0 +1,45 @@
+// =====課程簡介==========================
+.classIntro {
+	background-image: url(../images/bg_lightyellow.jpg);
+	.container {
+		.title {
+			&::before {background-color: map-get($colors, primary);}
+			color: map-get($colors, primary);        
+		}
+		>h4 {
+			color: #333;
+			padding-left: 32px;
+			margin-bottom: 15px;
+		}
+		p {
+			padding-left: 32px;
+		}
+	}
+}
+// =====課程重點(4個色塊)=================
+.classPoints {
+	background-image: url(../images/bg_grid.png);
+	padding-top: 35px;
+	.container div {
+		background-color: rgba(255,255,255,0.5);
+		width: 40%;
+		border-radius: 10px;
+		margin: 3% 5%;
+		box-shadow: 0px 0px 10px #61616133;
+		img {   //VBA1.jpg~VBA4.jpg
+			width: 100%;
+		}
+		ul {
+			// color: #FFF;
+			text-align: left;
+			padding: 20px 10px 20px 60px;
+		}
+	}
+}
+/*=====RWD==========================*/
+@media (max-width: 835px){
+	.classPoints .container div{
+		width: 80%;
+		margin: 5% 10%;
+	}
+}

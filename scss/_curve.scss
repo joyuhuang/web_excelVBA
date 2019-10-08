@@ -1,10 +1,10 @@
 // 各個部分的對應弧形圖檔
-$areas: info, content1, content2, content3;
+$areas: info, advantage, content2, content3;
 @each $area in $areas {
     .#{$area} {background-image: url(../images/curve_#{$area}.svg);}
 }
 // 弧形造型設定---------------------------
-.info, .content1, .content2, .content3,{
+.info, .advantage, .teacher, .classIntro, .classPoints, .content3,{
 	background-repeat: no-repeat;
     background-position: bottom -1px center;
     background-size: 100%;
@@ -26,6 +26,6 @@ header::after {
 
 // 視窗縮小 弧形造型弄扁一點-----------
 @media (max-width: 815px) {
-	header::after, .info, .content1, .content2, .content3 {background-size: 100% 30px;}
+	header::after, .info, .advantage, .teacher, .classIntro, .classPoints, .content3 {background-size: 100% 30px;}
 	.info .container>div {margin: 3% 10%;}
 }

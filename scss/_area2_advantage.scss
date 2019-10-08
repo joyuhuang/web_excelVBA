@@ -1,0 +1,88 @@
+// =====課程優點=============================
+.advantage {
+    background-color: map-get($colors, second);
+    .title {
+        &::before {background-color: #333;}
+        color: #333;
+    }
+    // 各項優點的外框------------------------
+    .container>div {
+        position: relative;
+        width: 308px;
+        
+  //箭頭------------------------------
+        img:first-of-type {
+            position: absolute;
+            left: -5px;
+            z-index: 2;
+        }
+        //圖示------------------------------
+        img:last-of-type {
+            position: relative;
+            top: 20px;
+            z-index: 1;
+        }
+        // 優點內容的淺黃橢圓區塊-----------------
+        .circle {
+            background-color: map-get($colors, second_light);
+            padding: 40px 29px;
+            border-radius: 10px;
+            height: 150px;
+            width: 250px;
+            position: relative;
+            top: -50px;
+            p {
+                padding-top: 25px;
+            }
+        }
+    }
+}
+
+/*=====RWD=================================*/
+@media (max-width: 1215px) {
+    .advantage {
+        min-height: 1320px;
+    }
+    .advantage .container>div {
+        display: block;
+        // width: 410px;
+        width: 85%;
+        min-height: 400px;
+        margin:  auto;
+        }
+    .advantage .del {
+        // text-indent: 10px;
+        // padding-top: 20px;
+        // width: 240px;
+        // padding-left: 300px;
+    }
+    .advantage .container>div img:first-of-type  {
+        // transform: rotate(5deg) scaleX(-1);
+        left: 28%;
+        // top: 50px;
+
+    }
+    .advantage .container>div img:last-of-type  {
+        // position: absolute;
+        // float: left;
+        // top: 60px;
+        // left: 360px;
+    
+    }
+    .advantage .container>div .circle  {
+        // position: absolute;
+        // float: left;
+        // top: 150px;
+        // left: 100px;
+        // margin: 0;
+        min-width: 600px;
+        min-height: 100px;
+            
+    }
+}
+@media (max-width: 750px) {
+    .advantage .container>div .circle  {
+        min-width: 400px;
+        min-height: 100px;
+    }
+}

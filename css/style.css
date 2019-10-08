@@ -1,15 +1,25 @@
 @charset "UTF-8";
-/*	text: #333,
-	text_light: #484f59,
-	text_dark: #161518,
-	title: #087b97,
-	// title_del: #75b9c6,
-	highlight: #feff00,
-	text_white: #FFF,
-	// sub-white: #96dce9
-);*/
+* {
+  font-family: "Microsoft JhengHei UI", 微軟正黑體, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 3% 60px;
+}
+
+.container > div {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  margin: 3%;
+}
+
 p, ul {
-  font-size: 16px;
+  font-size: 1em;
   color: #222;
   letter-spacing: 1px;
   line-height: 1.5em;
@@ -17,33 +27,28 @@ p, ul {
 
 .title_yellow {
   color: #feff00;
-  font-size: 36px;
+  font-size: 2.25em;
   font-weight: bold;
   line-height: 1.5em;
 }
 
 .point {
   color: #2a95af;
-  font-size: 24px;
+  font-size: 1.875em;
   font-weight: bold;
 }
 
 .del {
-  font-size: 26px;
+  font-size: 1.5em;
   font-weight: bold;
   color: #2a95af;
-	animation: myAnimation 5s ease 3s infinite normal;
+  text-decoration: line-through;
 }
 
-@keyframes myAnimation
-{
-  from { text-decoration: line-through; text-decoration-color: red }
-  to { text-decoration: line-through; text-decoration-color: red }
-}
 .title {
-  font-size: 30px;
-  padding-top: 30px;
-  margin-bottom: 20px;
+  font-size: 1.875em;
+  padding-top: 35px;
+  margin-bottom: 15px;
   line-height: 1.5em;
 }
 
@@ -59,39 +64,79 @@ p, ul {
 
 h1 {
   text-align: center;
-  font-size: 30px;
+  font-size: 1.875em;
   color: #0d86a3;
+  padding-top: 35px;
+}
+
+.teacher h3 {
+  font-size: 1.875em;
+  line-height: 1.5em;
+  margin-top: 30px;
 }
 
 h4 {
-  font-size: 26px;
+  font-size: 1.625em;
   font-weight: bold;
-  line-height: 2em;
   color: #222;
+  padding: 0.5em 0;
+}
+
+.students ul li {
+  font-size: 1.625em;
+  font-weight: bold;
+  color: #FFF;
+  margin-top: 25px;
+}
+
+.students ul li p {
+  font-size: 0.6em;
+  color: #FFF;
+  font-weight: normal;
+  margin-top: 15px;
 }
 
 .contact h3 {
-  font-size: 60px;
+  font-size: 3.75em;
   color: #39616b;
 }
 
-* {
-  font-family: "Microsoft JhengHei UI", 微軟正黑體, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 3% 2%;
-}
-
-.container > div {
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
-  margin: 3%;
+/*RWD文字縮小==================================*/
+@media (max-width: 480px) {
+  p, ul {
+    font-size: 0.875em;
+  }
+  .title_yellow {
+    font-size: 2.05em;
+  }
+  .point {
+    font-size: 1.675em;
+  }
+  .del {
+    font-size: 1.2em;
+  }
+  .title {
+    font-size: 1.575em;
+  }
+  h1 {
+    font-size: 1.675em;
+  }
+  .teacher h3 {
+    font-size: 1.675em;
+  }
+  h4 {
+    font-size: 1.425em;
+  }
+  .students ul li {
+    font-size: 1.425em;
+    margin-top: 25px;
+  }
+  .students ul li p {
+    font-size: 0.4em;
+  }
+  .contact h3 {
+    font-size: 3.55em;
+  }
 }
 
 .topbar {
@@ -117,63 +162,162 @@ h4 {
   font-size: 18px;
 }
 
-/*-----header banner 手機版型----------------------*/
-header {
-  background-image: url(../images/banner_bgm.jpg);
-  height: auto;
-  width: 100%;
-  margin: auto;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-color: #2cbcc5;
-  position: relative;
-}
-
-/*-----header banner 平板版型----------------------*/
-@media (min-width: 768px) {
-  header {
-    background-image: url(../images/banner_bgt.jpg);
-    background-size: cover;
-    background-position: center bottom;
-  }
-}
-
 @media (max-width: 920px) {
   .topbar {
     display: none;
   }
 }
 
-/*-----header banner 桌機版型----------------------*/
-@media (min-width: 1300px) {
+/*header banner (桌機版型)=======================*/
+header {
+  background-image: url(../images/banner_bg.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: #2cbcc5;
+  width: 100%;
+  height: 690px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/*-----標題字的底色塊----------------------------*/
+header > div {
+  max-width: 655px;
+  height: 350px;
+  background-color: rgba(30, 137, 144, 0.5);
+  margin: 120px auto 0;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+  padding-top: 1px;
+}
+
+/*-----老師圖片，要在色塊上方、標題文字下方--------*/
+header > div::before {
+  content: "";
+  background-image: url(../images/banner_teacher.png);
+  background-repeat: no-repeat;
+  display: block;
+  width: 655px;
+  height: 600px;
+  position: absolute;
+  top: -20px;
+  left: 502px;
+  z-index: -1;
+}
+
+/*-----副標題文字: 工作效率UP...-----------------*/
+header > div > p {
+  color: #FFF;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  max-width: 475px;
+  margin: auto;
+  position: relative;
+  top: 38px;
+  border-top: 2px solid #FFF;
+  border-bottom: 2px solid #FFF;
+  padding: 8px 0;
+}
+
+/*-----大標題圖片: 掌握Excel...-----------------*/
+header > div > img {
+  margin-top: 36px;
+}
+
+/*-----標題的裝飾箭頭---------------------------*/
+header > div::after {
+  content: "";
+  background-image: url(../images/banner_arrow.png);
+  background-repeat: no-repeat;
+  display: block;
+  width: 188px;
+  height: 160px;
+  position: relative;
+  top: -95px;
+  left: 446px;
+}
+
+/*header banner 平板版型========================*/
+@media (max-width: 1024px) {
   header {
-    background-image: url(../images/banner_bg.jpg);
-    background-position: center top;
-    background-size: auto;
+    background-image: url(../source/banner_bgt_test.jpg);
+    background-size: 100% auto;
+    height: 0;
+    padding-bottom: 85%;
+  }
+  header div {
+    margin-top: 11.5%;
+    background-clip: content-box;
+    padding: 0 10% 50%;
+  }
+  header div::before {
+    top: 27.5%;
+    left: 61%;
+    width: 50%;
+    background-size: contain;
   }
 }
 
-header img {
-  max-width: 620px;
-  width: 300px;
-  width: 80vw;
-  display: block;
-  padding: 5% 0 350px 0;
-  margin-left: auto;
-  margin-right: auto;
+/*header banner 手機版型======================*/
+@media (max-width: 815px) {
+  header {
+    background-image: url(../images/banner_bgm.jpg);
+    padding-bottom: 125%;
+  }
+  header div {
+    width: 90%;
+    background-clip: border-box;
+    height: 0;
+    padding: 0 0 50%;
+  }
+  header div::before {
+    width: 70%;
+    top: 91.8%;
+    left: 48%;
+  }
+  header div p {
+    font-size: 21px;
+    letter-spacing: 2px;
+    width: 70%;
+    margin-left: 15%;
+  }
+  header div img {
+    width: 80%;
+  }
+  header div::after {
+    background-size: contain;
+    width: 25%;
+    left: 70%;
+    top: -65px;
+  }
 }
 
-header::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  bottom: -1px;
-  display: block;
-  background-image: url(../images/header_triangle.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom;
+/*header banner 小手機版型====================*/
+@media (max-width: 565px) {
+  header div {
+    padding-bottom: 55%;
+  }
+  header div::before {
+    top: 89%;
+  }
+  header div p {
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 1.1em;
+    width: 70%;
+    margin-left: 15%;
+  }
+  header div img {
+    width: 75%;
+    margin-top: 12%;
+  }
+  header div::after {
+    width: 23%;
+    top: -55px;
+    left: 73%;
+  }
 }
 
 .info {
@@ -184,7 +328,9 @@ header::after {
   background-color: #fff;
   width: 39%;
   padding: 30px 0;
-  border-radius: 30px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 20px rgba(42, 148, 175, 0.2);
+          box-shadow: 0 0 20px rgba(42, 148, 175, 0.2);
 }
 
 .info .container > div h3 {
@@ -198,7 +344,13 @@ header::after {
 }
 
 .info .container > div p:first-of-type {
+  font-size: 24px;
   padding: 25px 50px;
+}
+
+.info img {
+  vertical-align: middle;
+  padding-bottom: 20px;
 }
 
 /*=====RWD=================================*/
@@ -220,6 +372,9 @@ header::after {
   h1 {
     padding-top: 20px;
   }
+  .info .container {
+    text-align: center;
+  }
   .info .container > div {
     width: 80%;
   }
@@ -227,8 +382,7 @@ header::after {
   .info img {
     /* 黃色箭頭*/
     -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
+            transform: rotate(90deg);
     display: block;
     width: 80px;
     margin: 0 auto;
@@ -236,289 +390,272 @@ header::after {
   }
 }
 
-.content1 {
+.advantage {
   background-color: #ffe868;
 }
 
-.content1 .title {
+.advantage .title {
   color: #333;
 }
 
-.content1 .title::before {
+.advantage .title::before {
   background-color: #333;
 }
 
-.content1 .container > div {
+.advantage .container > div {
   position: relative;
   width: 308px;
 }
 
-.content1 .container > div img:first-of-type {
+.advantage .container > div img:first-of-type {
   position: absolute;
   left: -5px;
   z-index: 2;
 }
 
-.content1 .container > div img:last-of-type {
+.advantage .container > div img:last-of-type {
   position: relative;
   top: 20px;
   z-index: 1;
 }
 
-.content1 .container > div .circle {
+.advantage .container > div .circle {
   background-color: #fffdcc;
   padding: 40px 29px;
   border-radius: 10px;
-  height: 190px;
+  height: 150px;
   width: 250px;
   position: relative;
   top: -50px;
 }
 
-.content1 .container > div .circle p {
+.advantage .container > div .circle p {
   padding-top: 25px;
 }
 
 /*=====RWD=================================*/
 @media (max-width: 1215px) {
-  .content1 .container {
-    text-align: justify;
-  }
-}
-
-@media (max-width: 800px) {
-  .content1 {
+  .advantage {
     min-height: 1320px;
   }
-  .content1 .container > div {
+  .advantage .container > div {
     display: block;
-    width: 410px;
-    height: 400px;
+    width: 85%;
+    min-height: 400px;
     margin: auto;
   }
-  .content1 .del {
-    /*		float: left;*/
-    /*		text-align: left;*/
-    text-indent: 10px;
-    padding-top: 20px;
-    width: 240px;
+  .advantage .container > div img:first-of-type {
+    left: 28%;
   }
-  .content1 .container > div img:first-of-type {
-    /*		float: left;*/
-    -webkit-transform: rotate(-50deg) scaleX(-1);
-    -ms-transform: rotate(-50deg) scaleX(-1);
-    transform: rotate(-50deg) scaleX(-1);
-    left: 270px;
-    top: -10px;
-  }
-  .content1 .container > div img:last-of-type {
-    position: absolute;
-    float: left;
-    top: 100px;
-    left: 0;
-  }
-  .content1 .container > div .circle {
-    position: absolute;
-    float: left;
-    top: 100px;
-    left: 100px;
-    margin: 0;
+  .advantage .container > div .circle {
+    min-width: 600px;
+    min-height: 100px;
   }
 }
 
-.content2 {
-  background-color: #eaeaea;
+@media (max-width: 750px) {
+  .advantage .container > div .circle {
+    min-width: 400px;
+    min-height: 100px;
+  }
 }
 
-.content2 .container:first-child img {
+.teacher {
+  background-image: url(../images/bg_lightorange.jpg);
+  /*&::after {
+    content: "";
+    display: table;
+    clear: both;
+  }*/
+}
+
+.teacher .container {
+  overflow: auto;
+  zoom: 1;
+}
+
+.teacher .container img {
   border-radius: 50%;
-  margin: 6%;
+  margin: 60px 6% 0;
   width: 23%;
   float: left;
 }
 
-.content2 .container:first-child h3, .content2 .container:first-child ul, .content2 .container:first-child p {
+.teacher .container h3, .teacher .container ul, .teacher .container p {
   float: left;
   width: 65%;
   padding: 10px;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.content2 .container:first-child h3 {
-  margin-top: 30px;
-  font-size: 30px;
-  line-height: 1.5em;
-}
-
-.content2 .container:first-child ul {
+.teacher .container ul {
   list-style: none;
   font-weight: bold;
 }
 
-.content2 .container:last-child {
-  clear: both;
-}
-
-.content2 .container:last-child .title {
-  color: #2cbcc5;
-}
-
-.content2 .container:last-child .title::before {
-  background-color: #2cbcc5;
-}
-
-.content2 .container:last-child > h4 {
-  color: #333;
-  font-size: 24px;
-  padding-left: 32px;
-  margin-bottom: 10px;
-}
-
-.content2 .container:last-child p {
-  padding-left: 32px;
-}
-
-.content2 .container:last-child div {
-  background-color: rgba(255, 255, 255, 0.5);
-  width: 40%;
-  border-radius: 20px;
-  margin: 3% 5%;
-}
-
-.content2 .container:last-child div img {
-  width: 100%;
-}
-
-.content2 .container:last-child div ul {
-  text-align: left;
-  padding: 20px 10px 20px 60px;
-}
-
 /*=====RWD==========================*/
 @media (max-width: 1015px) {
-  .content2 .container:first-child img {
+  .teacher .container img {
     width: 215px;
   }
-  .content2 .container:first-child h3, .content2 .container:first-child ul, .content2 .container:first-child p {
+  .teacher .container h3, .teacher .container ul, .teacher .container p {
     max-width: 60%;
   }
 }
 
 @media (max-width: 835px) {
-  .content2 .container:first-child {
+  .teacher .container {
     padding-top: 50px;
   }
-  .content2 .container:first-child img {
+  .teacher .container img {
     width: 250px;
     float: none;
     display: block;
     margin: 0 auto;
     /*		padding-top: 70px;*/
   }
-  .content2 .container:first-child h3, .content2 .container:first-child ul, .content2 .container:first-child p {
+  .teacher .container h3, .teacher .container ul, .teacher .container p {
     float: none;
     width: auto;
     max-width: none;
   }
-  .content2 .container:last-child div {
+}
+
+.classIntro {
+  background-image: url(../images/bg_lightyellow.jpg);
+}
+
+.classIntro .container .title {
+  color: #2cbcc5;
+}
+
+.classIntro .container .title::before {
+  background-color: #2cbcc5;
+}
+
+.classIntro .container > h4 {
+  color: #333;
+  padding-left: 32px;
+  margin-bottom: 15px;
+}
+
+.classIntro .container p {
+  padding-left: 32px;
+}
+
+.classPoints {
+  background-image: url(../images/bg_grid.png);
+  padding-top: 35px;
+}
+
+.classPoints .container div {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 40%;
+  border-radius: 10px;
+  margin: 3% 5%;
+  -webkit-box-shadow: 0px 0px 10px #61616133;
+          box-shadow: 0px 0px 10px #61616133;
+}
+
+.classPoints .container div img {
+  width: 100%;
+}
+
+.classPoints .container div ul {
+  text-align: left;
+  padding: 20px 10px 20px 60px;
+}
+
+/*=====RWD==========================*/
+@media (max-width: 835px) {
+  .classPoints .container div {
     width: 80%;
-    margin: 3% 10%;
+    margin: 5% 10%;
   }
 }
 
-.content3 {
+.students {
   background-color: #2a95af;
-  min-height: 650px;
+  min-height: 550px;
 }
 
-.content3 img {
-  margin: 150px 10% 0 6%;
+.students img {
+  margin: 75px 5% 0 6%;
   float: left;
-  width: 39%;
+  width: 44%;
 }
 
-.content3 h3, .content3 ul {
+.students h3, .students ul {
   width: 45%;
   float: left;
 }
 
-.content3 h3 {
+.students h3 {
   margin-top: 70px;
 }
 
-.content3 ul {
+.students ul {
   list-style: none;
 }
 
-.content3 ul li::before {
+.students ul li::before {
   content: url(../images/checked_icon.svg);
   position: relative;
   top: 6px;
   margin-right: 0.4em;
 }
 
-.content3 ul li {
-  font-size: 30px;
-  font-weight: bold;
-  color: #FFF;
-  margin-top: 25px;
-}
-
-.content3 ul li p {
-  color: #FFF;
-  font-weight: normal;
-  margin-top: 15px;
-}
-
 /*=====適合對象================================*/
-@media (max-width: 1040px) {
-  /*	.content3 h3 {font-size: 36px;}*/
-  .content3 img {
-    width: 30%;
-  }
-  .content3 h3, .content3 ul {
-    width: 54%;
-  }
-}
-
 @media (max-width: 875px) {
-  .content3 .container {
+  .students .container {
     padding-top: 50px;
     padding-bottom: 50px;
-    max-width: 450px;
   }
-  .content3 img {
+  .students img {
     float: none;
-    width: 250px;
+    width: 60%;
     display: block;
     margin: 0 auto 20px;
   }
-  .content3 h3, .content3 ul {
+  .students h3, .students ul {
     float: none;
-    width: auto;
-    margin: 0;
+    width: 370px;
+    margin: 0 auto;
   }
 }
 
 .contact {
-  background-color: #fff;
+  background-image: url(../images/bg_grey.png);
+  padding-top: 60px;
+  /*表單項目-------------------------*/
 }
 
 .contact h3 {
   width: 800px;
-  margin: 60px auto;
+  margin: 0 auto 60px;
   line-height: 2em;
   text-align: center;
   background-color: #fff45c;
   border-radius: 10px;
   -webkit-box-shadow: 0 11px #B7CFD1;
-  box-shadow: 0 11px #B7CFD1;
+          box-shadow: 0 11px #B7CFD1;
+}
+
+.contact .container {
+  overflow: auto;
+  zoom: 1;
+}
+
+.contact img {
+  width: 44%;
+  float: left;
 }
 
 .contact form {
-  width: 700px;
-  margin: 10px auto 200px;
+  float: left;
+  width: 55%;
+  margin: 10px auto;
   position: relative;
 }
 
@@ -527,15 +664,15 @@ header::after {
 }
 
 .contact input, .contact .area {
-  width: 320px;
-  height: 48px;
-  font-size: 24px;
+  width: 45%;
+  height: 40px;
+  font-size: 22px;
   border: 1px solid #2a95af;
   text-align: left;
   padding-left: 10px;
-  margin: 14px;
+  margin: 13px 2%;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .contact input::-webkit-input-placeholder {
@@ -559,7 +696,7 @@ header::after {
 }
 
 .contact #contactEmail {
-  width: 668px;
+  width: 95%;
 }
 
 .contact #contactIAgree {
@@ -567,7 +704,7 @@ header::after {
 }
 
 .contact label, .contact a {
-  font-size: 24px;
+  font-size: 22px;
   color: #333;
   line-height: 3em;
   position: relative;
@@ -582,48 +719,63 @@ header::after {
   color: #FFF;
   letter-spacing: 10px;
   padding-left: 45px;
-  margin-top: 70px;
   border: none;
   float: right;
+  position: absolute;
+  top: 250px;
+  right: 20px;
 }
 
 /*=====索取資訊表單===========================*/
-@media (max-width: 860px) {
+@media (max-width: 875px) {
   .contact h3 {
     font-size: 50px;
     width: 600px;
   }
+  .contact img {
+    float: none;
+    width: 70%;
+    width: 550px;
+    display: block;
+    margin: 0 auto 20px;
+  }
   .contact form {
-    width: 554px;
-    margin-bottom: 80px;
+    width: 90%;
+    float: none;
+    margin-bottom: 50px;
   }
-  .contact input, .contact #contactEmail {
-    width: 528px;
+  .contact input, .contact .area {
+    width: 45%;
+    margin: 2%;
   }
-  .contact .area {
-    width: 249px;
+  .contact #contactEmail {
+    width: 95%;
   }
   .contact #submitBtn {
-    float: none;
-    display: block;
-    margin: 15px auto;
+    top: 250px;
   }
 }
 
 @media (max-width: 650px) {
   .contact h3 {
-    font-size: 40px;
-    width: 450px;
+    font-size: 32px;
+    width: 85%;
+    max-width: 450px;
+  }
+  .contact img {
+    width: 85%;
   }
   .contact form {
-    width: 350px;
+    width: 90%;
   }
   .contact input, .contact #contactEmail, .contact .area {
-    width: 328px;
-    margin: 10px;
+    width: 95%;
   }
   .contact label, .contact a {
     font-size: 20px;
+  }
+  .contact #submitBtn {
+    top: 350px;
   }
 }
 
@@ -636,5 +788,4 @@ footer p {
   text-align: center;
   color: #FFF;
 }
-
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,52 @@
+// =====課程資訊=============================
+.info {
+	background-color: map-get($colors, light);
+	// padding-bottom: 30px;
+
+	// -----白色圓角區塊----------------------
+	.container>div {
+		background-color: #fff;
+		width: 39%;
+		padding: 30px 0;
+		border-radius: 10px;
+		box-shadow: 0 0 20px rgba(42, 148, 175, 0.2);
+		// 深底黃字標題-----------------------
+		h3 {
+			background-color: map-get($colors, dark);
+			font-weight: normal;
+			letter-spacing: 0.15em;
+		}
+		// 課程名稱&資訊----------------------
+		p {padding: 3px 50px;}
+		p:first-of-type {
+			font-size: 24px;
+			padding: 25px 50px;
+		}
+	}
+	img {
+		vertical-align: middle;
+		padding-bottom: 20px;
+	}
+}
+
+/*=====RWD=================================*/
+@media (max-width: 1015px){
+	.info img {width: 80px;}
+}
+@media (max-width: 989px){
+	.info .container>div {margin: 3% 2.5%;}
+}
+/*變單欄排版--------------------------*/
+@media (max-width: 815px) {
+/*	弧形造型弄扁一點-----------*/
+	h1 {padding-top: 20px;}
+	.info .container {text-align: center;}
+	.info .container>div {width: 80%;}/* 白色圓角區塊*/
+	.info img {/* 黃色箭頭*/
+		transform: rotate(90deg);
+		display: block;
+		width: 80px;
+		margin: 0 auto;
+		padding: 0;
+	}
+}

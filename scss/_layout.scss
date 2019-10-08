@@ -1,4 +1,13 @@
-
+$font_family: "Microsoft JhengHei UI", 微軟正黑體, sans-serif;
+$container_h: 1140px;
+$colors: (
+	primary: #2cbcc5,
+	light: #ebf9f9,
+	dark: #2a95af,
+	second: #ffe868,
+	second_light: #fffdcc
+);
+    
 * {
     font-family: $font_family;
     margin: 0;
@@ -8,7 +17,7 @@
 .container {
     max-width: $container_h;
     margin: 0 auto;
-    padding: 0 3% 2%;
+    padding: 0 3% 60px;
     // box-sizing: border-box;
 }
 .container>div {
