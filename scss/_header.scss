@@ -62,6 +62,7 @@ header>div>img {
 /*-----標題的裝飾箭頭---------------------------*/
 header>div::after {
 	content: "";
+	padding: 0;
 	background-image: url(../images/banner_arrow.png);
 	background-repeat: no-repeat;
 	display: block;	//為了指定寬高，讓背景圖顯示出來
@@ -70,6 +71,11 @@ header>div::after {
 	position: relative;
 	top: -95px;
 	left: 446px;
+	animation: Ani1 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@keyframes Ani1{
+  0% { transform: translateX(-50%) scale(0); }
+  50% { transform: translateX(-50%) scale(0); }
 }
 
 /*header banner 平板版型========================*/

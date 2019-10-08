@@ -42,7 +42,34 @@ p, ul {
   font-size: 1.5em;
   font-weight: bold;
   color: #2a95af;
-  text-decoration: line-through;
+  -webkit-animation: myAnimation 2s ease 3s infinite normal;
+          animation: myAnimation 2s ease 3s infinite normal;
+}
+
+@-webkit-keyframes myAnimation {
+  from {
+    text-decoration: line-through;
+    -webkit-text-decoration-color: transparent;
+            text-decoration-color: transparent;
+  }
+  to {
+    text-decoration: line-through;
+    -webkit-text-decoration-color: red;
+            text-decoration-color: red;
+  }
+}
+
+@keyframes myAnimation {
+  from {
+    text-decoration: line-through;
+    -webkit-text-decoration-color: transparent;
+            text-decoration-color: transparent;
+  }
+  to {
+    text-decoration: line-through;
+    -webkit-text-decoration-color: red;
+            text-decoration-color: red;
+  }
 }
 
 .title {
@@ -229,6 +256,7 @@ header > div > img {
 /*-----標題的裝飾箭頭---------------------------*/
 header > div::after {
   content: "";
+  padding: 0;
   background-image: url(../images/banner_arrow.png);
   background-repeat: no-repeat;
   display: block;
@@ -237,6 +265,30 @@ header > div::after {
   position: relative;
   top: -95px;
   left: 446px;
+  -webkit-animation: Ani1 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          animation: Ani1 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@-webkit-keyframes Ani1 {
+  0% {
+    -webkit-transform: translateX(-50%) scale(0);
+            transform: translateX(-50%) scale(0);
+  }
+  50% {
+    -webkit-transform: translateX(-50%) scale(0);
+            transform: translateX(-50%) scale(0);
+  }
+}
+
+@keyframes Ani1 {
+  0% {
+    -webkit-transform: translateX(-50%) scale(0);
+            transform: translateX(-50%) scale(0);
+  }
+  50% {
+    -webkit-transform: translateX(-50%) scale(0);
+            transform: translateX(-50%) scale(0);
+  }
 }
 
 /*header banner 平板版型========================*/

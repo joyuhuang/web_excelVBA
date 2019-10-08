@@ -36,7 +36,13 @@ p,ul {
 	font-size: map-get($fontSizes, del);
 	font-weight: bold;
 	color: map-get($colors, dark);
-	text-decoration: line-through;
+	animation: myAnimation 2s ease 3s infinite normal;
+}
+
+@keyframes myAnimation
+{
+  from { text-decoration: line-through; text-decoration-color: transparent }
+  to { text-decoration: line-through; text-decoration-color: red }
 }
 // 前面有小方塊的標題---------------------
 .title {

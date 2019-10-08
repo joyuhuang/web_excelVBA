@@ -9,8 +9,8 @@
 	<META NAME="Title" CONTENT="掌握Excel VBA，工作效率秒提升">
 	<META NAME="Description" CONTENT="擁有VBA技能薪資也跟著升級！老師將一步步帶領大家學會錄製巨集、簡易VBA撰寫及函數、語法的用運，初學者也可以輕鬆學習，立刻解決工作上遇到的問題。">
 	<META NAME="keywords" CONTENT="IT360,Excel VBA,巨集,VBA語法,函數 ">
+		<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/style.css">
-	<!-- <link rel="stylesheet" href="css/animate.css"> -->
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/TWzipcode/jquery.twzipcode.min.js"></script>
 
@@ -26,6 +26,13 @@
 <body>
 	<script src="js/wow.min.js"></script>
 	<script>
+		var wow = new WOW({
+    		boxClass: 'wow',
+			animateClass: 'animated',
+			offset: 0,
+			mobile: true,
+			live: true
+		});
 		new WOW().init();
 	</script>
 	<nav>
@@ -41,13 +48,13 @@
 	</nav>
 	<header>
 			<div>
-			<p>工作效率ＵＰ！提早下班就靠它！</p>
-			<img src="images/banner_title.png" alt="掌握Excel VBA，工作效率秒提升" class="wow zoomIn wHighlight">
+			<p class="wow bounceIn" data-wow-delay="0.5s">工作效率ＵＰ！提早下班就靠它！</p>
+			<img src="images/banner_title.png" alt="掌握Excel VBA，工作效率秒提升" class="wow zoomIn">
 		</div>
 	</header>
-	<section class="info wow fadeInLeftBig">
-		<h1>Excel VBA 初階概念、進階實務</h1>
-		<div class="container">
+	<section class="info">
+		<h1 class="wow fadeInLeftBig">Excel VBA 初階概念、進階實務</h1>
+		<div class="container wow fadeInLeftBig">
 			<div>
 				<h3 class="title_yellow">初階課程</h3>
 				<p class="point">Excel VBA初階概念：入門超easy，工作效率翻倍提升</p>
@@ -63,8 +70,8 @@
 			</div>
 		</div>
 	</section>
-	<section class="advantage wow fadeInRightBig" data-wow-delay="0.5s">
-		<div class="container">
+	<section class="advantage">
+		<div class="container wow fadeInRightBig" data-wow-delay="0.5s">
 			<h3 class="title">使用Excel，你是否也有這樣的困擾？</h3>
 			<div>
 				<p class="del">海量資料土法煉鋼</p>
@@ -95,6 +102,7 @@
 			</div>
 		</div>
 	</section>
+	
 	<section class="teacher">
 		<div class="container wow zoomInRight">
 			<img src="images/teacher_s.jpg" alt="蘇世榮老師">
@@ -112,7 +120,7 @@
 
 
 	<section class="classIntro">
-		<div class="container">
+		<div class="container wow zoomInRight">
 			<h3 class="title">活用Excel VBA，提升效率又加薪！</h3>
 			
 			<h4>簡單案例教學，80組語法一次掌握</h4>
@@ -120,44 +128,45 @@
 		</div>
 	</section>
 
-	<section class="classPoints"><div class="container">
-		<div class="wow bounceInDown">
-			<h4>錄製巨集的技巧</h4>
-			<img src="images/VBA1.jpg" alt="">
-			<ul>
-			<li>相對位置和絕對位置的差別</li>
-			<li>去除空白列、數字轉換日期</li>
-			<li>建立進銷存系統</li>
-			<li>建立自動記錄的巨集</li>
-			</ul>
-		</div><div class="wow bounceInDown">
-			<h4>VBA初體驗</h4>
-			<img src="images/VBA2.jpg" alt="">
-			<ul>
-			<li>儲存格、欄列、工作表指定方式</li>
-			<li>單條件、多條件判斷與法</li>
-			<li>資料型態和變數運用</li>
-			<li>迴圈語法、物件迴圈</li>
-			</ul>
-		</div><div class="wow bounceInUp">
-			<h4>常用語法</h4>
-			<img src="images/VBA3.jpg" alt="">
-			<ul>
-			<li>活頁簿常用語法</li>
-			<li>工作表常用語法</li>
-			<li>儲存格常用語法</li>
-			<li>其他常用語法</li>
-			</ul>
-		</div><div class="wow bounceInUp">
-			<h4>VBA中使用Excel函數</h4>
-			<img src="images/VBA4.jpg" alt="">
-			<ul>
-			<li>加入Excel函數</li>
-			<li>自訂函數：串接、判斷等級</li>
-			<li>增益級的建立</li>
-			<li>IF、Select Case、Switch、迴圈</li>
-			</ul>
-		</div>
+	<section class="classPoints">
+		<div class="container wow zoomInRight">
+			<div class="wow bounceInDown">
+				<h4>錄製巨集的技巧</h4>
+				<img src="images/VBA1.jpg" alt="">
+				<ul>
+				<li>相對位置和絕對位置的差別</li>
+				<li>去除空白列、數字轉換日期</li>
+				<li>建立進銷存系統</li>
+				<li>建立自動記錄的巨集</li>
+				</ul>
+			</div><div class="wow bounceInDown">
+				<h4>VBA初體驗</h4>
+				<img src="images/VBA2.jpg" alt="">
+				<ul>
+				<li>儲存格、欄列、工作表指定方式</li>
+				<li>單條件、多條件判斷與法</li>
+				<li>資料型態和變數運用</li>
+				<li>迴圈語法、物件迴圈</li>
+				</ul>
+			</div><div class="wow bounceInUp">
+				<h4>常用語法</h4>
+				<img src="images/VBA3.jpg" alt="">
+				<ul>
+				<li>活頁簿常用語法</li>
+				<li>工作表常用語法</li>
+				<li>儲存格常用語法</li>
+				<li>其他常用語法</li>
+				</ul>
+			</div><div class="wow bounceInUp">
+				<h4>VBA中使用Excel函數</h4>
+				<img src="images/VBA4.jpg" alt="">
+				<ul>
+				<li>加入Excel函數</li>
+				<li>自訂函數：串接、判斷等級</li>
+				<li>增益級的建立</li>
+				<li>IF、Select Case、Switch、迴圈</li>
+				</ul>
+			</div>
 		</div>
 	</section>
 
