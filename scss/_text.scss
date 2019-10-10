@@ -36,10 +36,10 @@ p,ul {
 	font-size: map-get($fontSizes, del);
 	font-weight: bold;
 	color: map-get($colors, dark);
-	animation: myAnimation 2s ease 3s infinite normal;
+	animation: delAnimation 2s ease 3s infinite normal;
 }
 
-@keyframes myAnimation
+@keyframes delAnimation
 {
   from { text-decoration: line-through; text-decoration-color: transparent }
   to { text-decoration: line-through; text-decoration-color: red }
