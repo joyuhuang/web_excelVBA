@@ -134,7 +134,7 @@ h4 {
     font-size: 0.875rem;
   }
   .title_yellow {
-    font-size: 2.05rem;
+    font-size: 1.875rem;
   }
   .point {
     font-size: 1.675rem;
@@ -155,11 +155,11 @@ h4 {
     font-size: 1.425rem;
   }
   .students ul li {
-    font-size: 1.425rem;
+    font-size: 1.25rem;
     margin-top: 25px;
   }
   .students ul li p {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
   .contact h3 {
     font-size: 3.55rem;
@@ -444,6 +444,7 @@ header > div::after {
 
 .advantage {
   background-color: #ffe868;
+  overflow: hidden;
 }
 
 .advantage .title {
@@ -486,13 +487,13 @@ header > div::after {
 }
 
 /*=====RWD=================================*/
-@media (max-width: 1215px) {
+@media (max-width: 1230px) {
   .advantage {
     min-height: 1320px;
   }
   .advantage .container > div {
     display: block;
-    width: 85%;
+    width: 80%;
     max-width: 700px;
     min-height: 400px;
     margin: auto;
@@ -505,7 +506,9 @@ header > div::after {
     left: -40px;
   }
   .advantage .container > div .circle {
-    width: 93%;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     height: auto;
     min-height: 100px;
   }
@@ -513,7 +516,6 @@ header > div::after {
 
 @media (max-width: 480px) {
   .advantage .container > div {
-    width: 95%;
     max-width: 500px;
   }
   .advantage .container > div img:first-of-type {
@@ -525,7 +527,6 @@ header > div::after {
     max-width: 134px;
   }
   .advantage .container > div .circle {
-    width: 83%;
     padding: 40px 8%;
   }
 }
@@ -653,6 +654,7 @@ header > div::after {
 .students {
   background-color: #2a95af;
   min-height: 550px;
+  overflow: hidden;
 }
 
 .students img {
@@ -695,7 +697,7 @@ header > div::after {
   }
   .students h3, .students ul {
     float: none;
-    width: 370px;
+    width: 380px;
     margin: 0 auto;
   }
 }
@@ -704,6 +706,12 @@ header > div::after {
   .students h3, .students ul {
     max-width: 300px;
     width: 90%;
+  }
+  .students h3 li, .students ul li {
+    line-height: 1.5em;
+  }
+  .students h3 li p, .students ul li p {
+    margin-top: 5px;
   }
 }
 

@@ -1,6 +1,7 @@
 // =====課程優點=============================
 .advantage {
     background-color: map-get($colors, second);
+    overflow: hidden;
     .title {
         &::before {background-color: #333;}
         color: #333;
@@ -39,14 +40,14 @@
 }
 
 /*=====RWD=================================*/
-@media (max-width: 1215px) {
+@media (max-width: 1230px) {
     .advantage {
         min-height: 1320px;
     }
     .advantage .container>div {
         display: block;
         // width: 410px;
-        width: 85%;
+        width: 80%;
         max-width: 700px;
         min-height: 400px;
         margin:  auto;
@@ -60,7 +61,8 @@
     }
     .advantage .container>div .circle  {
         // min-width: 93%;
-        width: 93%;
+        width: 100%;
+        box-sizing: border-box;
         height: auto;
         min-height: 100px;
             
@@ -68,7 +70,7 @@
 }
 @media (max-width: 480px) {
     .advantage .container>div {
-        width: 95%;
+        // width: 95%;
         max-width: 500px;
         }
     .advantage .container>div img:first-of-type  {
@@ -82,7 +84,7 @@
     }
 
     .advantage .container>div .circle  {
-        width: 83%;
+        // width: 83%;
         // min-height: 100px;
         padding: 40px 8%;
             }

@@ -1,7 +1,8 @@
 // =====適合對象=============================
 .students {
     background-color: map-get($colors, dark);
-    min-height: 550px;
+		min-height: 550px;
+		overflow: hidden;
 	img {
 		margin: 75px 5% 0 6%;
 		float: left;
@@ -39,19 +40,19 @@
 	}
 	.students h3, .students ul {
 		float: none;
-		width: 370px;
+		width: 380px;
 		margin: 0 auto;
 	}
 }
 @media (max-width: 480px){
-	.students .container {
-
-	}
-	.students img {
-
-	}
 	.students h3, .students ul {
 		max-width: 300px;
 		width: 90%;
+		li {
+			line-height: 1.5em;
+			p {
+				margin-top: 5px;
+			}
+		}
 	}
 }

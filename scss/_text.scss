@@ -111,7 +111,7 @@ h4 {
 		font-size: map-get($fontSizes, text) - 0.125rem;
 	}
 	.title_yellow {// 黃色的標題字
-		font-size: map-get($fontSizes, title_yellow) - 0.2rem;
+		font-size: map-get($fontSizes, title_yellow) - 0.375rem;
 	}
 	.point {// 深主色的重點文字
 		font-size: map-get($fontSizes, point) - 0.2rem;
@@ -133,11 +133,11 @@ h4 {
 		font-size:  map-get($fontSizes, classPoints_h4) - 0.2rem;
 	}
 	.students ul li {// 適合學習對象的項目標題
-		font-size: map-get($fontSizes, student_li) - 0.2rem;
+		font-size: map-get($fontSizes, student_li) - 0.375rem;
 		margin-top: 25px;
 	}
 	.students ul li p {// 適合學習對象的項目中的說明文字
-		font-size: map-get($fontSizes, student_p) - 0.125rem;
+		font-size: map-get($fontSizes, student_p) - 0.25rem;
 	}
 	.contact h3 {// 表單區塊的大標題
 		font-size:  map-get($fontSizes, contact_h3) - 0.2rem;
