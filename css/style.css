@@ -42,11 +42,11 @@ p, ul {
   font-size: 1.5em;
   font-weight: bold;
   color: #2a95af;
-  -webkit-animation: myAnimation 2s ease 3s infinite normal;
-          animation: myAnimation 2s ease 3s infinite normal;
+  -webkit-animation: delAnimation 2s ease 3s infinite normal;
+          animation: delAnimation 2s ease 3s infinite normal;
 }
 
-@-webkit-keyframes myAnimation {
+@-webkit-keyframes delAnimation {
   from {
     text-decoration: line-through;
     -webkit-text-decoration-color: transparent;
@@ -59,7 +59,7 @@ p, ul {
   }
 }
 
-@keyframes myAnimation {
+@keyframes delAnimation {
   from {
     text-decoration: line-through;
     -webkit-text-decoration-color: transparent;
@@ -140,7 +140,7 @@ h4 {
     font-size: 1.675em;
   }
   .del {
-    font-size: 1.2em;
+    font-size: 1.25em;
   }
   .title {
     font-size: 1.575em;
@@ -493,22 +493,39 @@ header > div::after {
   .advantage .container > div {
     display: block;
     width: 85%;
+    max-width: 700px;
     min-height: 400px;
     margin: auto;
   }
   .advantage .container > div img:first-of-type {
-    left: 28%;
+    position: relative;
+    left: -50px;
+  }
+  .advantage .container > div img:last-of-type {
+    left: -40px;
   }
   .advantage .container > div .circle {
-    min-width: 600px;
+    width: 93%;
     min-height: 100px;
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 480px) {
+  .advantage .container > div {
+    width: 95%;
+    max-width: 500px;
+  }
+  .advantage .container > div img:first-of-type {
+    width: 25%;
+    max-width: 83px;
+  }
+  .advantage .container > div img:last-of-type {
+    width: 45%;
+    max-width: 134px;
+  }
   .advantage .container > div .circle {
-    min-width: 400px;
-    min-height: 100px;
+    width: 83%;
+    padding: 40px 8%;
   }
 }
 
@@ -672,7 +689,7 @@ header > div::after {
   }
   .students h3, .students ul {
     float: none;
-    width: 370px;
+    width: 300px;
     margin: 0 auto;
   }
 }

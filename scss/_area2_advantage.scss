@@ -47,42 +47,42 @@
         display: block;
         // width: 410px;
         width: 85%;
+        max-width: 700px;
         min-height: 400px;
         margin:  auto;
         }
-    .advantage .del {
-        // text-indent: 10px;
-        // padding-top: 20px;
-        // width: 240px;
-        // padding-left: 300px;
-    }
     .advantage .container>div img:first-of-type  {
-        // transform: rotate(5deg) scaleX(-1);
-        left: 28%;
-        // top: 50px;
-
+        position: relative;
+        left: -50px;
     }
-    .advantage .container>div img:last-of-type  {
-        // position: absolute;
-        // float: left;
-        // top: 60px;
-        // left: 360px;
-    
+    .advantage .container>div img:last-of-type {
+        left: -40px;
     }
     .advantage .container>div .circle  {
-        // position: absolute;
-        // float: left;
-        // top: 150px;
-        // left: 100px;
-        // margin: 0;
-        min-width: 600px;
+        // min-width: 93%;
+        width: 93%;
         min-height: 100px;
             
     }
 }
-@media (max-width: 750px) {
-    .advantage .container>div .circle  {
-        min-width: 400px;
-        min-height: 100px;
+@media (max-width: 480px) {
+    .advantage .container>div {
+        width: 95%;
+        max-width: 500px;
+        }
+    .advantage .container>div img:first-of-type  {
+        //  left: 0;
+         width: 25%;
+         max-width: 83px;
     }
+    .advantage .container>div img:last-of-type  {
+         width: 45%;
+         max-width: 134px;
+    }
+
+    .advantage .container>div .circle  {
+        width: 83%;
+        // min-height: 100px;
+        padding: 40px 8%;
+            }
 }
