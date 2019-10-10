@@ -19,7 +19,7 @@
 }
 
 p, ul {
-  font-size: 1em;
+  font-size: 1rem;
   color: #222;
   letter-spacing: 1px;
   line-height: 1.5em;
@@ -27,19 +27,19 @@ p, ul {
 
 .title_yellow {
   color: #feff00;
-  font-size: 2.25em;
+  font-size: 2.25rem;
   font-weight: bold;
   line-height: 1.5em;
 }
 
 .point {
   color: #2a95af;
-  font-size: 1.875em;
+  font-size: 1.875rem;
   font-weight: bold;
 }
 
 .del {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #2a95af;
   -webkit-animation: delAnimation 2s ease 3s infinite normal;
@@ -73,7 +73,7 @@ p, ul {
 }
 
 .title {
-  font-size: 1.875em;
+  font-size: 1.875rem;
   padding-top: 35px;
   margin-bottom: 15px;
   line-height: 1.5em;
@@ -91,78 +91,78 @@ p, ul {
 
 h1 {
   text-align: center;
-  font-size: 1.875em;
+  font-size: 1.875rem;
   color: #0d86a3;
   padding-top: 35px;
 }
 
 .teacher h3 {
-  font-size: 1.875em;
+  font-size: 1.875rem;
   line-height: 1.5em;
   margin-top: 30px;
 }
 
 h4 {
-  font-size: 1.625em;
+  font-size: 1.625rem;
   font-weight: bold;
   color: #222;
   padding: 0.5em 0;
 }
 
 .students ul li {
-  font-size: 1.625em;
+  font-size: 1.625rem;
   font-weight: bold;
   color: #FFF;
   margin-top: 25px;
 }
 
 .students ul li p {
-  font-size: 0.6em;
+  font-size: 1.125rem;
   color: #FFF;
   font-weight: normal;
   margin-top: 15px;
 }
 
 .contact h3 {
-  font-size: 3.75em;
+  font-size: 3.75rem;
   color: #39616b;
 }
 
 /*RWD文字縮小==================================*/
 @media (max-width: 480px) {
   p, ul {
-    font-size: 0.875em;
+    font-size: 0.875rem;
   }
   .title_yellow {
-    font-size: 2.05em;
+    font-size: 2.05rem;
   }
   .point {
-    font-size: 1.675em;
+    font-size: 1.675rem;
   }
   .del {
-    font-size: 1.25em;
+    font-size: 1.25rem;
   }
   .title {
-    font-size: 1.575em;
+    font-size: 1.575rem;
   }
   h1 {
-    font-size: 1.675em;
+    font-size: 1.5rem;
   }
   .teacher h3 {
-    font-size: 1.675em;
+    font-size: 1.675rem;
   }
   h4 {
-    font-size: 1.425em;
+    font-size: 1.425rem;
   }
   .students ul li {
-    font-size: 1.425em;
+    font-size: 1.425rem;
     margin-top: 25px;
   }
   .students ul li p {
-    font-size: 0.4em;
+    font-size: 1rem;
   }
   .contact h3 {
-    font-size: 3.55em;
+    font-size: 3.55rem;
   }
 }
 
@@ -506,6 +506,7 @@ header > div::after {
   }
   .advantage .container > div .circle {
     width: 93%;
+    height: auto;
     min-height: 100px;
   }
 }
@@ -554,6 +555,7 @@ header > div::after {
   float: left;
   width: 65%;
   padding: 10px;
+  padding-right: 32px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -569,7 +571,8 @@ header > div::after {
     width: 215px;
   }
   .teacher .container h3, .teacher .container ul, .teacher .container p {
-    max-width: 60%;
+    width: 60%;
+    padding-right: 0;
   }
 }
 
@@ -581,13 +584,14 @@ header > div::after {
     width: 250px;
     float: none;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 15px;
     /*		padding-top: 70px;*/
   }
   .teacher .container h3, .teacher .container ul, .teacher .container p {
     float: none;
     width: auto;
-    max-width: none;
+    width: 85%;
+    margin: auto;
   }
 }
 
@@ -606,11 +610,13 @@ header > div::after {
 .classIntro .container > h4 {
   color: #333;
   padding-left: 32px;
+  padding-right: 32px;
   margin-bottom: 15px;
 }
 
 .classIntro .container p {
   padding-left: 32px;
+  padding-right: 32px;
 }
 
 .classPoints {
@@ -689,8 +695,15 @@ header > div::after {
   }
   .students h3, .students ul {
     float: none;
-    width: 300px;
+    width: 370px;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .students h3, .students ul {
+    max-width: 300px;
+    width: 90%;
   }
 }
 

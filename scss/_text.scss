@@ -1,20 +1,20 @@
-$fontSizes: (							//預設文字大小16px=1em
-	text: 1em,							//16px,用在p & ul
-	title_yellow: 2.25em,		//36px,用在.info&.students
-	del: 1.5em,							//24px,用在.advantage
-	title: 1.875em,					//30px,用在.advantage&.classIntro
-	point: 1.875em,					//30px,用在.info&.advantage
-	h1: 1.875em,						//30px,在.info
-	teacher_h3: 1.875em,		//30px,在.teacher中的老師名字
-	classPoints_h4: 1.625em,//26px,4個課程重點方塊的標題
-	student_li: 1.625em,		//30px,在.student的項目標題
-	student_p: 0.6em,				//18px (會繼承li的大小，所以是30px*0.6),在.student的項目說明文字
-	contact_h3: 3.75em			//60px,表單區塊的大標題
+$fontSizes: (							//預設文字大小16px=1rem
+	text: 1rem,							//16px,用在p & ul
+	title_yellow: 2.25rem,		//36px,用在.info&.students
+	del: 1.5rem,							//24px,用在.advantage
+	title: 1.875rem,					//30px,用在.advantage&.classIntro
+	point: 1.875rem,					//30px,用在.info&.advantage
+	h1: 1.875rem,						//30px,在.info
+	teacher_h3: 1.875rem,		//30px,在.teacher中的老師名字
+	classPoints_h4: 1.625rem,//26px,4個課程重點方塊的標題
+	student_li: 1.625rem,		//30px,在.student的項目標題
+	student_p: 1.125rem,				//18px,在.student的項目說明文字
+	contact_h3: 3.75rem			//60px,表單區塊的大標題
 );
 
 p,ul {
-    font-size: map-get($fontSizes, text);
-    color: #222;
+	font-size: map-get($fontSizes, text);
+	color: #222;
 	letter-spacing: 1px;
 	line-height: 1.5em;
 }
@@ -108,38 +108,38 @@ h4 {
 /*RWD文字縮小==================================*/
 @media (max-width: 480px) {
 	p,ul {
-		font-size: map-get($fontSizes, text) - 0.125em;
+		font-size: map-get($fontSizes, text) - 0.125rem;
 	}
 	.title_yellow {// 黃色的標題字
-		font-size: map-get($fontSizes, title_yellow) - 0.2em;
+		font-size: map-get($fontSizes, title_yellow) - 0.2rem;
 	}
 	.point {// 深主色的重點文字
-		font-size: map-get($fontSizes, point) - 0.2em;
+		font-size: map-get($fontSizes, point) - 0.2rem;
 	}
 	.del {// 畫刪除線的文字
-		font-size: map-get($fontSizes, del) - 0.25em;
+		font-size: map-get($fontSizes, del) - 0.25rem;
 	}
 	.title {// 前面有小方塊的標題
-			font-size: map-get($fontSizes, title) - 0.3em;
+			font-size: map-get($fontSizes, title) - 0.3rem;
 	}
 
 	h1 {
-		font-size: map-get($fontSizes, h1) - 0.2em;
+		font-size: map-get($fontSizes, h1) - 0.375rem;
 	}
 	.teacher h3 {// 老師介紹中的老師名字
-		font-size: map-get($fontSizes, teacher_h3) - 0.2em;
+		font-size: map-get($fontSizes, teacher_h3) - 0.2rem;
 	}
 	h4 {// .classPoints中4個課程重點方塊的標題
-		font-size:  map-get($fontSizes, classPoints_h4) - 0.2em;
+		font-size:  map-get($fontSizes, classPoints_h4) - 0.2rem;
 	}
 	.students ul li {// 適合學習對象的項目標題
-		font-size: map-get($fontSizes, student_li) - 0.2em;
+		font-size: map-get($fontSizes, student_li) - 0.2rem;
 		margin-top: 25px;
 	}
 	.students ul li p {// 適合學習對象的項目中的說明文字
-		font-size: map-get($fontSizes, student_p) - 0.2em;
+		font-size: map-get($fontSizes, student_p) - 0.125rem;
 	}
 	.contact h3 {// 表單區塊的大標題
-		font-size:  map-get($fontSizes, contact_h3) - 0.2em;
+		font-size:  map-get($fontSizes, contact_h3) - 0.2rem;
 	}
 }

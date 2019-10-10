@@ -9,10 +9,12 @@
 		>h4 {
 			color: #333;
 			padding-left: 32px;
+			padding-right: 32px;
 			margin-bottom: 15px;
 		}
 		p {
 			padding-left: 32px;
+			padding-right: 32px;
 		}
 	}
 }
@@ -37,7 +39,18 @@
 	}
 }
 /*=====RWD==========================*/
+
 @media (max-width: 835px){
+
+	.classIntro .container>h4, .classIntro .container>p {
+		// width: 90%;
+		// margin: auto;
+	}
+	
+
+
+
+	// 課程重點(4個色塊)部分
 	.classPoints .container div{
 		width: 80%;
 		margin: 5% 10%;
