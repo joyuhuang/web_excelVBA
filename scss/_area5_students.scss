@@ -24,6 +24,12 @@
 			margin-right: 0.4em;
 		}
 	}
+	.container:last-child ul {
+		padding-bottom: 90px;
+		li {
+			font-weight: normal;
+		}
+	}
 }
 /*=====適合對象================================*/
 @media (max-width: 875px){
@@ -42,6 +48,9 @@
 		float: none;
 		width: 380px;
 		margin: 0 auto;
+	}
+	.students .container:last-child ul {
+		padding-bottom: 10%;
 	}
 }
 @media (max-width: 480px){
