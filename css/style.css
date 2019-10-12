@@ -236,6 +236,15 @@ header > div > a {
   left: -80px;
 }
 
+header > div > a:hover {
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+}
+
 /*-----標題字的底色塊----------------------------*/
 header > div {
   max-width: 655px;
@@ -518,6 +527,20 @@ header > div::after {
   padding-top: 25px;
 }
 
+.advantage .container > div .circle:hover {
+  -webkit-box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.2);
+}
+
+.advantage .container > div:hover img:nth-child(3) {
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+}
+
 /*=====RWD=================================*/
 @media (max-width: 1230px) {
   .advantage {
@@ -673,6 +696,11 @@ header > div::after {
 .classPoints .container div ul {
   text-align: left;
   padding: 20px 10px 20px 60px;
+}
+
+.classPoints .container div:hover {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
 }
 
 /*=====RWD==========================*/

@@ -33,6 +33,14 @@ header>div>a {
 	left: -80px;
 	
 }
+header > div > a:hover {
+	-webkit-transition: all 0.6s ease;
+	transition: all 0.6s ease;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: rotateY(360deg);
+	transform: rotateY(360deg);
+}
 /*-----標題字的底色塊----------------------------*/
 header>div {
 	max-width: 655px;
