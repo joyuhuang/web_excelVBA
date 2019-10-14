@@ -314,6 +314,36 @@ header {
   overflow: hidden;
 }
 
+<<<<<<< HEAD
+=======
+/*-----馬上開課標誌------------------------------*/
+header > div > a {
+  display: block;
+  width: 150px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #ffe868;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 1.3em;
+  padding-top: 20px;
+  position: absolute;
+  top: -70px;
+  left: -80px;
+}
+
+header > div > a:hover {
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+}
+
+>>>>>>> ce5ced33578118dbd4fb8893d71b455039437012
 /*-----標題字的底色塊----------------------------*/
 header > div {
   max-width: 655px;
@@ -593,7 +623,11 @@ header > div::after {
   padding-top: 25px;
 }
 
+<<<<<<< HEAD
 .advantage .container > div .hover_shadow {
+=======
+.advantage .container > div .circle:hover {
+>>>>>>> ce5ced33578118dbd4fb8893d71b455039437012
   -webkit-box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.2);
   box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.2);
 }
