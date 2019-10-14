@@ -14,25 +14,6 @@ header {
 	// padding-top: 1px;
 	// position: relative;
 }
-/*-----馬上開課標誌------------------------------*/
-header>div>a {
-	display: block;
-	width: 150px;
-	height: 130px;
-	border-radius: 50%;
-	background-color: map-get($colors, second);
-	text-decoration: none;
-	color: #000;
-	font-weight: bold;
-	font-size: 40px;
-	// letter-spacing: 0.15em;
-	line-height: 1.3em;
-	padding-top: 20px;
-	position: absolute;
-	top: -70px;
-	left: -80px;
-	
-}
 /*-----標題字的底色塊----------------------------*/
 header>div {
 	max-width: 655px;
@@ -106,10 +87,6 @@ header>div::after {
 		height: 0;
 		padding-bottom: 85%;	//代替height來設定區塊高度，依照底圖的長寬比
 
-		div>a {//馬上開課標誌
-			left: 25px;
-
-		}
 		div {//標題字的底色塊
 			margin-top: 11.5%;
 			//為了讓老師照片的大小及位置可以隨視窗大小微調，改成只有內容區有底色並增加百分比的padding

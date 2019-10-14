@@ -16,17 +16,10 @@
 		overflow: auto;
     zoom: 1;
 	}
-	.img {
+	img {
 		width: 44%;
 		float: left;
-		margin: 0;
-		img {
-			width: 100%;
-		}
-		p {
-			position: relative;
-			top: -20px;
-		}
+		// margin: 0;
 	}
 	form {
 		// display: inline-block;
@@ -98,7 +91,7 @@
 		font-size: 50px;
 		width: 600px;
 	}
-	#contact .img {
+	#contact img {
 		float: none;
 		width: 70%;
 		width: 550px;
@@ -132,7 +125,7 @@
 		width: 85%;
 		max-width: 450px;
 	}
-	#contact .img {
+	#contact img {
 		width: 85%;
 	}
 	#contact form {
