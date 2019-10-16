@@ -67,6 +67,18 @@
 			});
 		});
 
+		$(function(){
+			// === 刪除線動畫 ==========================
+			delAni();
+			function delAni() {				
+				$(".fault").addClass('del');
+				setTimeout(function(){
+					$(".fault").removeClass('del');
+					setTimeout(delAni, 500);
+				},500);
+			};
+		});
+
 	</script>
 </head>
 <body>
@@ -110,7 +122,7 @@
 		<div class="container wow fadeInRightBig" data-wow-delay="0.5s">
 			<h3 class="title">資料處理快狠準，提早下班的秘訣！</h3>
 			<div>
-				<p class="del">海量資料土法煉鋼</p>
+				<p class="fault del">海量資料土法煉鋼</p>
 				<img src="images/arrow.svg" alt="">
 				<img src="images/icon1.svg" alt="">
 				<div class="circle">
@@ -119,7 +131,7 @@
 				</div>
 			</div>
 			<div>
-				<p class="del">VBA語法好難懂</p>
+				<p class="fault del">VBA語法好難懂</p>
 				<img src="images/arrow.svg" alt="">
 				<img src="images/icon2.svg" alt="">
 				<div class="circle">
@@ -128,7 +140,7 @@
 				</div>
 			</div>
 			<div>
-				<p class="del">找語法超花時間</p>
+				<p class="fault del">找語法超花時間</p>
 				<img src="images/arrow.svg" alt="">
 				<img src="images/icon3.svg" alt="">
 				<div class="circle">
