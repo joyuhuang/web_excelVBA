@@ -37,6 +37,8 @@ p,ul {
 	font-size: map-get($fontSizes, del);
 	font-weight: bold;
 	color: map-get($colors, dark);
+	text-decoration: line-through; 
+	text-decoration-color: red;
 	animation: delAnimation 2s ease 3s infinite normal;
 }
 

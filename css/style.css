@@ -42,6 +42,9 @@ p, ul {
   font-size: 1.5rem;
   font-weight: bold;
   color: #2a95af;
+  text-decoration: line-through;
+  -webkit-text-decoration-color: red;
+          text-decoration-color: red;
   -webkit-animation: delAnimation 2s ease 3s infinite normal;
           animation: delAnimation 2s ease 3s infinite normal;
 }
