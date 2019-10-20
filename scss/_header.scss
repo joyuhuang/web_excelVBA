@@ -15,11 +15,10 @@ header {
 	// position: relative;
 }
 /*-----標題字的底色塊----------------------------*/
-header>div {
+#bannerTitle {
 	max-width: 655px;
 	height: 350px;
 	background-color: rgba($color: #1e8990, $alpha: 0.5);
-	// margin-top: 120px;
 	margin: 120px auto 0;
 	text-align: center;	//讓內容(p、img)置中對齊
 	position: relative;	//為了讓內容可以定位排版及z-index能發揮作用
@@ -27,7 +26,7 @@ header>div {
 	padding-top: 1px;
 }
 /*-----老師圖片，要在色塊上方、標題文字下方--------*/
-header>div::before {
+#bannerTitle::before {
 	content: "";
 	background-image: url(../images/banner_teacher.png);
 	background-repeat: no-repeat;
@@ -39,8 +38,26 @@ header>div::before {
 	left: 502px;
 	z-index: -1;	//為了讓大標題(img)能在上層不被遮住
 }
+/*-----老師名字---------------------------------*/
+.teacherName {
+	max-width: 1110px;
+	margin: 65px auto 0;
+	padding: 0 20px;
+	text-align: right;
+	position: relative;
+}
+.teacherName>p {
+	color: #FFF;
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 1.15em;
+}
+.teacherName>p:first-of-type {
+	font-size: 20px;
+	padding-right: 52px;
+}
 /*-----副標題文字: 工作效率UP...-----------------*/
-header>div>p {
+#bannerTitle>p {
 	color: #FFF;
 	font-size: 24px;
 	font-weight: bold;
@@ -48,7 +65,8 @@ header>div>p {
 	max-width: 475px;
 	margin: auto;
 	position: relative;
-	top: 38px;
+	// top: 38px;
+	margin-top: 5.5%;
 	
 	// 上下的裝飾線條
 	border-top: 2px solid #FFF;
@@ -56,11 +74,11 @@ header>div>p {
 	padding: 8px 0;
 }
 /*-----大標題圖片: 掌握Excel...-----------------*/
-header>div>img {
-	margin-top: 36px;
-}
+// #bannerTitle>img {
+	// margin-top: 36px;
+// }
 /*-----標題的裝飾箭頭---------------------------*/
-header>div::after {
+#bannerTitle::after {
 	content: "";
 	padding: 0;
 	background-image: url(../images/banner_arrow.png);
@@ -78,101 +96,194 @@ header>div::after {
   50% { transform: translateX(-50%) scale(0); }
 }
 
-/*header banner 平板版型========================*/
-@media (max-width: 1024px) {
+
+/*header banner 平板(橫)版型--換背景圖、老師照片及名字縮小一點==========*/
+@media (max-width: 1000px) {
 	header {
-		// background-image: url(../images/banner_bgt.jpg);
-		background-image: url(../source/banner_bgt_test.jpg);
+		background-image: url(../images/banner_bgt.jpg);
 		background-size: 100% auto;
 		height: 0;
 		padding-bottom: 85%;	//代替height來設定區塊高度，依照底圖的長寬比
+	}
+	#bannerTitle {//標題字的底色塊
+		margin-top: 11.5%;
 
-		div {//標題字的底色塊
-			margin-top: 11.5%;
-			//為了讓老師照片的大小及位置可以隨視窗大小微調，改成只有內容區有底色並增加百分比的padding
-			background-clip: content-box; 
-			padding: 0 10% 50%;
-
-			&::before {//老師圖片
-				top: 27.5%;
-				left: 61%;
-				width: 50%;
-				background-size: contain;				
-			}
+		&::before {//老師圖片
+			top: 240px;
+			left: 425px;
+			width: 430px;
+			background-size: contain;
 		}
+	}
+	.teacherName {//老師名字
+		margin-top: 26%;
+		padding-right: 7%;
+	}
+	.teacherName>p:first-of-type {
+		font-size: 17px;
+		padding-right: 45px;
+	}
+	.teacherName>p:last-of-type {
+		font-size: 26px;
 	}
 }
 
+/*----改變標題區塊大小----------------------*/
+@media (max-width: 890px) {
+	#bannerTitle {//標題字的底色塊
+		margin-top: 8%;
+		height: 325px;
+		&::before {//老師圖片
+			width: 400px;
+			top: 220px;
+			left: 435px;
+		}
+		img {//大標題圖片: 掌握Excel...
+			width: 75%;
+		}
+		&::after {//標題的裝飾箭頭
+			background-size: contain;
+			width: 25%;
+			left: 70%;
+			// top: -78px;
+			position: absolute;
+			margin-top: 42.5%;
+		}
+	}
+	.teacherName {//老師名字
+		margin-top: 27%;
+		padding-right: 4%;
+	}
+}
 			
-/*header banner 手機版型======================*/
-@media (max-width: 815px) {
+/*header banner 平板(直)版型--換背景圖、改標題區塊設定方式==========*/
+@media (max-width: 768px) {
 	header {
 		background-image: url(../images/banner_bgm.jpg);
-		padding-bottom: 125%;
+		// padding-bottom: 125%;
+		padding-bottom: 116%;
+	}
+	#bannerTitle {//標題字的底色塊
+		width: 85%;
+		// 為了讓色塊可以隨視窗調整大小，又因父元素header的高度為0，只能採用和header一樣的做法來讓高度隨視窗調整
+		height: 0;
+		padding: 5% 0 39%;	//色塊的高度
 
-		div {//標題字的底色塊
-			width: 90%;
-			// 為了讓色塊可以隨視窗調整大小，background-clip改回預設模式，又因父元素header的高度為0，只能採用和header一樣的做法來讓高度隨視窗調整
-			background-clip: border-box;
-			height: 0;
-			padding: 0 0 50%;	//色塊的高度
-
-			&::before {//老師圖片
-				width: 70%;
-				top: 91.8%;
-				left: 48%;
-			}
-			p {//副標題文字: 工作效率UP...
-				font-size: 21px;
-				letter-spacing: 2px;
-				width: 70%;
-				margin-left: 15%;
-				
-			}
-			img {//大標題圖片: 掌握Excel...
-				width: 80%;
-			}
-			&::after {//標題的裝飾箭頭
-				background-size: contain;
-				width: 25%;
-				left: 70%;
-				top: -65px;
-			}
+		&::before {//老師圖片
+			width: 70%;
+			top: 91.8%;
+			left: 48%;
+		}
+		p {//副標題文字: 工作效率UP...
+			font-size: 22px;
+			letter-spacing: 2px;
+			width: 80%;
+			margin-top: 0%;
+		}
+		&::after {//標題的裝飾箭頭
+			width: 23%;
+			margin-top: 45%;
+			left: 72%;
 		}
 	}
+	.teacherName {//老師名字
+		margin-top: 50%;
+		padding-right: 8%;
+
+	}
 }
-			
+/*-----改箭頭位置-------------------------*/
+@media (max-width: 625px) {
+	#bannerTitle::after {//標題的裝飾箭頭
+		width: 22%;
+		margin-top: 51%;
+	}
+}
+
+/*header banner 手機版型====================*/
+@media (max-width: 550px) {
+	#bannerTitle {//標題字的底色塊
+		padding: 7% 0 42%;	//色塊的高度
+
+		&::before {//老師圖片
+			// top: 75%;
+			top: 89%;
+		}
+		p {//副標題文字: 工作效率UP...
+			font-size: 18px;
+			letter-spacing: 1px;
+			line-height: 1.1em;
+			width: 75%;
+		}
+		img {//大標題圖片: 掌握Excel...
+			width: 75%;
+		}
+		&::after {//標題的裝飾箭頭
+			margin-top: 55%;
+		}
+	}
+	.teacherName {//老師名字
+		margin-top: 48%;
+	}
+	.teacherName>p:first-of-type {
+		font-size: 15px;
+		padding-right: 34px;
+	}
+	.teacherName>p:last-of-type {
+		font-size: 22px;
+	}
+}
+
 /*header banner 小手機版型====================*/
-@media (max-width: 565px) {
-	header {
-		
-		div {//標題字的底色塊
-			padding-bottom: 55%;	//色塊的高度
+@media (max-width: 475px) {
+	#bannerTitle {
+		padding-bottom: 39%;
+		p {//副標題文字: 工作效率UP...
+			font-size: 15px;
+			font-weight: 600;
+			letter-spacing: normal;
+			border-width: 1px;
+		}
+		img {//大標題圖片: 掌握Excel...
+			width: 72%;
+		}
+		&::after {//標題的裝飾箭頭
+			margin-top: 57%;
+		}
+	}
+	.teacherName>p:first-of-type {
+		font-size: 13px;
+		padding-right: 24px;
+	}
+	.teacherName>p:last-of-type {
+		font-size: 18px;
+	}
+}
+/*-----富標題文字微調----------------*/
+@media (max-width: 385px) {
+	#bannerTitle p {//副標題文字: 工作效率UP...
+		font-size: 14px;
+		width: 83%;
+	}
+	#bannerTitle::after {//標題的裝飾箭頭
+		margin-top: 64%;
+		width: 21%;
+	}
+}
 
-			&::before {//老師圖片
-				// top: 75%;
-				top: 89%;
-			}
-			p {//副標題文字: 工作效率UP...
-				font-size: 18px;
-				letter-spacing: 1px;
-				line-height: 1.1em;
-				width: 70%;
-				margin-left: 15%;				
-			}
-			img {
-				width: 75%;
-				margin-top: 12%;
-			}
-			&::after {//標題的裝飾箭頭
-				width: 23%;
-				top: -55px;
-				left: 73%;
-			}
+/*header banner 版型 320以下====================*/
+@media (max-width: 318px) {
+	#bannerTitle {
+		height: auto;
+		padding: 10% 0 5%;
+		img {//大標題圖片: 掌握Excel...
+			width: 90%;
+		}
+		&::after {//標題的裝飾箭頭
+			content: none;
 		}
 	}
 }
-			
 	
 // 下方三角形造型裝飾
 // header::after {
