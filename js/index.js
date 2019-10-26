@@ -5,7 +5,7 @@ $(document).ready(function(){
   var wow = new WOW({
     boxClass: 'wow',
     animateClass: 'animated',
-    offset: 0,
+    offset: 100,
     mobile: true,
     live: true
   });
@@ -48,6 +48,7 @@ $(document).ready(function(){
 });
 
 $(function(){
+  $(".wow").attr("data-wow-duration","0.7s");
   // === 刪除線動畫 ==========================
   delAni();
   function delAni() {				
