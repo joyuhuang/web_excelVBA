@@ -4,10 +4,13 @@
 	padding-top: 60px;
 
 	h3 {
-		width: 800px;
+		width: 400px;
 		margin: 0 auto 60px;
-		line-height: 2em;
+		line-height: 2.6em;
 		text-align: center;
+		font-size: 26px;
+		letter-spacing: 3px;
+		color: #39616b;
 		background-color: #fff45c;
 		border-radius: 10px;
 		box-shadow: 0 11px #B7CFD1;
@@ -88,8 +91,8 @@
 // 圖和表單上下排列
 @media (max-width: 875px){
 	#contact h3 {
-		font-size: 50px;
-		width: 600px;
+		font-size: 26px;
+		width: 400px;
 	}
 	#contact img {
 		float: none;
@@ -121,12 +124,12 @@
 // 表單變成單攔排列
 @media (max-width: 650px){
 	#contact h3 {
-		font-size: 32px;
+		font-size: 26px;
 		width: 85%;
 		max-width: 450px;
 	}
 	#contact img {
-		width: 85%;
+		width: 75%;
 	}
 	#contact form {
 		width: 90%;
