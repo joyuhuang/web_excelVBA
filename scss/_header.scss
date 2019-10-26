@@ -172,7 +172,7 @@ header {
 		&::before {//老師圖片
 			width: 70%;
 			top: 91.8%;
-			left: 48%;
+			left: 31%;
 		}
 		p {//副標題文字: 工作效率UP...
 			font-size: 22px;
@@ -188,7 +188,7 @@ header {
 	}
 	.teacherName {//老師名字
 		margin-top: 50%;
-		padding-right: 8%;
+		padding-right: 20%;
 
 	}
 }
@@ -277,11 +277,21 @@ header {
 		height: auto;
 		padding: 10% 0 5%;
 		img {//大標題圖片: 掌握Excel...
-			width: 90%;
+			width: 80%;
 		}
 		&::after {//標題的裝飾箭頭
 			content: none;
 		}
+	}
+	.teacherName {//老師名字
+		margin-top: 35%;
+	}
+	.teacherName>p:first-of-type {
+		font-size: 13px;
+		padding-right: 9px;
+	}
+	.teacherName>p:last-of-type {
+		font-size: 15px;
 	}
 }
 	
