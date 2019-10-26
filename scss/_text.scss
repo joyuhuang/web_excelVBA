@@ -29,7 +29,7 @@ p,ul {
 // 深主色的重點文字----------------------
 .point {
 	color: map-get($colors, dark);
-	font-size: map-get($fontSizes, point);
+	font-size: map-get($fontSizes, del);
 	font-weight: bold;
 }
 // 畫刪除線的文字------------------------
@@ -124,7 +124,7 @@ h4 {
 	.point {// 深主色的重點文字
 		font-size: map-get($fontSizes, point) - 0.2rem;
 	}
-	.del {// 畫刪除線的文字
+	.fault {// 畫刪除線的文字
 		font-size: map-get($fontSizes, del) - 0.25rem;
 	}
 	.title {// 前面有小方塊的標題

@@ -34,7 +34,7 @@ p, ul {
 
 .point {
   color: #2a95af;
-  font-size: 1.875rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -125,7 +125,7 @@ h4 {
   .point {
     font-size: 1.675rem;
   }
-  .del {
+  .fault {
     font-size: 1.25rem;
   }
   .title {
@@ -601,7 +601,6 @@ header {
 }
 
 .info .container > div p:first-of-type {
-  font-size: 24px;
   padding: 25px 50px;
 }
 
@@ -667,7 +666,8 @@ header {
 
 .advantage .container > div img:first-of-type {
   position: absolute;
-  left: -5px;
+  left: 20px;
+  top: 45px;
   z-index: 2;
 }
 
@@ -688,7 +688,7 @@ header {
 }
 
 .advantage .container > div .circle p {
-  padding-top: 25px;
+  padding-top: 30px;
 }
 
 .advantage .container > div .hover_shadow {
@@ -719,10 +719,11 @@ header {
   }
   .advantage .container > div img:first-of-type {
     position: relative;
-    left: -50px;
+    left: -60px;
+    top: -35px;
   }
   .advantage .container > div img:last-of-type {
-    left: -40px;
+    left: -25px;
   }
   .advantage .container > div .circle {
     width: 100%;
@@ -738,12 +739,14 @@ header {
     max-width: 500px;
   }
   .advantage .container > div img:first-of-type {
-    width: 25%;
-    max-width: 83px;
+    left: -40px;
+    top: -40px;
+    width: 17%;
+    max-width: 50px;
   }
   .advantage .container > div img:last-of-type {
     width: 45%;
-    max-width: 134px;
+    max-width: 122px;
   }
   .advantage .container > div .circle {
     padding: 40px 8%;

@@ -14,7 +14,8 @@
   //箭頭------------------------------
         img:first-of-type {
             position: absolute;
-            left: -5px;
+            left: 20px;
+            top: 45px;
             z-index: 2;
         }
         //圖示------------------------------
@@ -33,7 +34,7 @@
             position: relative;
             top: -50px;
             p {
-                padding-top: 25px;
+                padding-top: 30px;
             }
         }
         .hover_shadow {
@@ -68,10 +69,11 @@
         }
     .advantage .container>div img:first-of-type  {
         position: relative;
-        left: -50px;
+        left: -60px;
+        top: -35px;
     }
     .advantage .container>div img:last-of-type {
-        left: -40px;
+        left: -25px;
     }
     .advantage .container>div .circle  {
         // min-width: 93%;
@@ -88,13 +90,14 @@
         max-width: 500px;
         }
     .advantage .container>div img:first-of-type  {
-        //  left: 0;
-         width: 25%;
-         max-width: 83px;
+         left: -40px;
+         top: -40px;
+         width: 17%;
+         max-width: 50px;
     }
     .advantage .container>div img:last-of-type  {
          width: 45%;
-         max-width: 134px;
+         max-width: 122px;
     }
 
     .advantage .container>div .circle  {
