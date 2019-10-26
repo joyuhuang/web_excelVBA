@@ -3,13 +3,12 @@ $fontSizes: (							//預設文字大小16px=1rem
 	title_yellow: 2.25rem,		//36px,用在.info&.students
 	del: 1.5rem,							//24px,用在.advantage
 	title: 1.875rem,					//30px,用在.advantage&.classIntro
-	point: 1.875rem,					//30px,用在.info&.advantage
+	point: 1.5rem,					//30px,用在.info&.advantage
 	h1: 1.875rem,						//30px,在.info
 	teacher_h3: 1.875rem,		//30px,在.teacher中的老師名字
 	classPoints_h4: 1.625rem,//26px,4個課程重點方塊的標題
 	student_li: 1.625rem,		//30px,在.student的項目標題
 	student_p: 1.125rem,				//18px,在.student的項目說明文字
-	contact_h3: 3.75rem,			//60px,表單區塊的大標題
 	contact_p: 1.625rem			//30px,表單區塊的免費領取Excel數位學習秘笈
 );
 
@@ -29,7 +28,7 @@ p,ul {
 // 深主色的重點文字----------------------
 .point {
 	color: map-get($colors, dark);
-	font-size: map-get($fontSizes, del);
+	font-size: map-get($fontSizes, point);
 	font-weight: bold;
 }
 // 畫刪除線的文字------------------------
@@ -98,11 +97,6 @@ h4 {
 	font-weight: normal;
 	margin-top: 15px;
 }
-// 表單區塊的大標題
-#contact h3 {
-	font-size:  map-get($fontSizes, contact_h3);
-	color: #39616b;
-}
 // 表單區塊的免費領取Excel數位學習秘笈
 #contact .img p {
 	font-size:  map-get($fontSizes, contact_p);
@@ -122,7 +116,7 @@ h4 {
 		font-size: map-get($fontSizes, title_yellow) - 0.375rem;
 	}
 	.point {// 深主色的重點文字
-		font-size: map-get($fontSizes, point) - 0.2rem;
+		font-size: map-get($fontSizes, point) - 0.25rem;
 	}
 	.fault {// 畫刪除線的文字
 		font-size: map-get($fontSizes, del) - 0.25rem;
@@ -146,9 +140,6 @@ h4 {
 	}
 	.students ul li p {// 適合學習對象的項目中的說明文字
 		font-size: map-get($fontSizes, student_p) - 0.25rem;
-	}
-	#contact h3 {// 表單區塊的大標題
-		font-size:  map-get($fontSizes, contact_h3) - 0.2rem;
 	}
 	#contact .img p {// 表單區塊的免費領取字樣
 		font-size:  map-get($fontSizes, contact_p) - 0.125rem;

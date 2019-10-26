@@ -101,11 +101,6 @@ h4 {
   margin-top: 15px;
 }
 
-#contact h3 {
-  font-size: 3.75rem;
-  color: #39616b;
-}
-
 #contact .img p {
   font-size: 1.625rem;
   color: #2cbcc5;
@@ -123,7 +118,7 @@ h4 {
     font-size: 1.875rem;
   }
   .point {
-    font-size: 1.675rem;
+    font-size: 1.25rem;
   }
   .fault {
     font-size: 1.25rem;
@@ -146,9 +141,6 @@ h4 {
   }
   .students ul li p {
     font-size: 0.875rem;
-  }
-  #contact h3 {
-    font-size: 3.55rem;
   }
   #contact .img p {
     font-size: 1.5rem;
