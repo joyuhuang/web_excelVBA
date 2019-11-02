@@ -88,24 +88,16 @@ h4 {
 	font-size: map-get($fontSizes, student_li);
 	font-weight: bold;
 	color: #FFF;
-	margin-top: 25px;
+	margin-bottom: 12px;
 }
 // 適合學習對象的項目中的說明文字
 .students ul li p {
 	font-size: map-get($fontSizes, student_p);
 	color: #FFF;
 	font-weight: normal;
-	margin-top: 15px;
+	margin-top: 5px;
 }
-// 表單區塊的免費領取Excel數位學習秘笈
-#contact .img p {
-	font-size:  map-get($fontSizes, contact_p);
-	color: map-get($colors, primary);
-	font-weight: bold;
-	text-shadow: 0 0 8px #feff00;
-	line-height: 1em;
 
-}
 
 /*RWD文字縮小==================================*/
 @media (max-width: 480px) {
@@ -136,7 +128,7 @@ h4 {
 	}
 	.students ul li {// 適合學習對象的項目標題
 		font-size: map-get($fontSizes, student_li) - 0.375rem;
-		margin-top: 25px;
+		margin-top: 15px;
 	}
 	.students ul li p {// 適合學習對象的項目中的說明文字
 		font-size: map-get($fontSizes, student_p) - 0.25rem;

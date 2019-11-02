@@ -4,7 +4,7 @@
 		min-height: 550px;
 		overflow: hidden;
 	img {
-		margin: 75px 5% 0 6%;
+		margin: 75px 5% 70px 6%;
 		float: left;
 		width: 44%;
 	}
@@ -14,6 +14,7 @@
 	}
 	h3 {
 		margin-top: 70px;
+		font-size: 2.6rem;
 	}
 	ul {
 		list-style: none;
@@ -46,9 +47,10 @@
 	}
 	.students h3, .students ul {
 		float: none;
-		width: 380px;
+		width: 415px;
 		margin: 0 auto;
 	}
+
 	.students .container:last-child ul {
 		padding-bottom: 10%;
 	}
@@ -57,11 +59,12 @@
 	.students h3, .students ul {
 		max-width: 300px;
 		width: 90%;
-		li {
-			line-height: 1.5em;
-			p {
-				margin-top: 5px;
-			}
-		}
+	}
+	.students ul li {
+		line-height: 1.5em;
+	}
+	.students h3 {
+		font-size: 1.9rem;
+		line-height: 1em;
 	}
 }

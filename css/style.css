@@ -91,22 +91,14 @@ h4 {
   font-size: 1.625rem;
   font-weight: bold;
   color: #FFF;
-  margin-top: 25px;
+  margin-bottom: 12px;
 }
 
 .students ul li p {
   font-size: 1.125rem;
   color: #FFF;
   font-weight: normal;
-  margin-top: 15px;
-}
-
-#contact .img p {
-  font-size: 1.625rem;
-  color: #2cbcc5;
-  font-weight: bold;
-  text-shadow: 0 0 8px #feff00;
-  line-height: 1em;
+  margin-top: 5px;
 }
 
 /*RWD文字縮小==================================*/
@@ -137,7 +129,7 @@ h4 {
   }
   .students ul li {
     font-size: 1.25rem;
-    margin-top: 25px;
+    margin-top: 15px;
   }
   .students ul li p {
     font-size: 0.875rem;
@@ -889,7 +881,7 @@ header {
 }
 
 .students img {
-  margin: 75px 5% 0 6%;
+  margin: 75px 5% 70px 6%;
   float: left;
   width: 44%;
 }
@@ -901,6 +893,7 @@ header {
 
 .students h3 {
   margin-top: 70px;
+  font-size: 2.6rem;
 }
 
 .students ul {
@@ -936,7 +929,7 @@ header {
   }
   .students h3, .students ul {
     float: none;
-    width: 380px;
+    width: 415px;
     margin: 0 auto;
   }
   .students .container:last-child ul {
@@ -949,11 +942,12 @@ header {
     max-width: 300px;
     width: 90%;
   }
-  .students h3 li, .students ul li {
+  .students ul li {
     line-height: 1.5em;
   }
-  .students h3 li p, .students ul li p {
-    margin-top: 5px;
+  .students h3 {
+    font-size: 1.9rem;
+    line-height: 1em;
   }
 }
 
