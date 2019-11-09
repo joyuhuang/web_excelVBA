@@ -88,14 +88,14 @@ h4 {
 }
 
 .students ul li {
-  font-size: 1.225rem;
+  font-size: 1.375rem;
   font-weight: bold;
   color: #FFF;
   margin-bottom: 12px;
 }
 
 .students ul li p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: #FFF;
   font-weight: normal;
   margin-top: 5px;
@@ -128,13 +128,11 @@ h4 {
     font-size: 1.425rem;
   }
   .students ul li {
+    font-size: 1.25rem;
     margin-top: 15px;
   }
   .students ul li p {
     font-size: 0.875rem;
-  }
-  #contact .img p {
-    font-size: 1.5rem;
   }
 }
 
@@ -892,7 +890,7 @@ header {
 
 .students h3 {
   margin-top: 70px;
-  font-size: 1.725rem;
+  font-size: 1.75rem;
 }
 
 .students ul {
@@ -928,7 +926,7 @@ header {
   }
   .students h3, .students ul {
     float: none;
-    width: 415px;
+    width: 350px;
     margin: 0 auto;
   }
   .students .container:last-child ul {
