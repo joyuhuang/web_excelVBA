@@ -88,7 +88,7 @@ h4 {
 }
 
 .students ul li {
-  font-size: 1.625rem;
+  font-size: 1.225rem;
   font-weight: bold;
   color: #FFF;
   margin-bottom: 12px;
@@ -128,7 +128,6 @@ h4 {
     font-size: 1.425rem;
   }
   .students ul li {
-    font-size: 1.25rem;
     margin-top: 15px;
   }
   .students ul li p {
@@ -893,7 +892,7 @@ header {
 
 .students h3 {
   margin-top: 70px;
-  font-size: 2.6rem;
+  font-size: 1.725rem;
 }
 
 .students ul {
@@ -946,7 +945,6 @@ header {
     line-height: 1.5em;
   }
   .students h3 {
-    font-size: 1.9rem;
     line-height: 1em;
   }
 }
