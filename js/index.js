@@ -45,6 +45,11 @@ $(document).ready(function(){
     },function(){
       $(this).find('.circle').removeClass("hover_shadow");
   });
+
+  $('#bar').click(function () {
+		$('#bar').toggleClass('bar_open')
+		$('#menu').slideToggle();			
+	});
 });
 
 $(function(){
